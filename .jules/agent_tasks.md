@@ -13,7 +13,7 @@
 * 🏗️ `js/games/balloon-float.js`: 1753 lines. Split into domain modules and colocate dependencies.
 
 ## The [PRUNER] Queue
-* 🧹 `js/games/melody-maker.js:230`: Replace raw `console.log` calls with structured telemetry logger.
+
 * 🧹 `scripts/download-emoji.js:118`: Replace raw `console.log` calls with structured telemetry logger.
 * 🧹 `scripts/download-emoji.js:153`: Replace raw `console.log` calls with structured telemetry logger.
 * 🧹 `scripts/download-emoji.js:155`: Replace raw `console.log` calls with structured telemetry logger.

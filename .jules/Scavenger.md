@@ -1,0 +1,1 @@
+- js/games/melody-maker.js:230 removed console.log
