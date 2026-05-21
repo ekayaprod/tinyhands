@@ -20,10 +20,10 @@
 - [ ] 🧹 `scripts/download-emoji.js:157`: Replace raw `console.log` calls with structured telemetry logger.
 - [ ] 🧹 `scripts/download-emoji.js:167`: Replace raw `console.log` calls with structured telemetry logger.
 
-## Error Handling & Edge Cases
-- [ ] 🛡️ `js/games/spell-it-out.js:199`: Missing error-handling catch block. Map edge cases for localStorage.
-- [ ] 🛡️ `js/games/rocket-ride.js:988`: Missing error-handling catch block. Map edge cases for localStorage.
-- [ ] 🛡️ `js/games/rocket-ride.js:989`: Missing error-handling catch block. Map edge cases for localStorage.
-- [ ] 🛡️ `js/games/memory-match.js:97`: Missing error-handling catch block. Map edge cases for localStorage.
-- [ ] 🛡️ `js/games/memory-match.js:101`: Missing error-handling catch block. Map edge cases for localStorage.
-- [ ] 🛡️ `js/games/balloon-float.js:1066`: Missing error-handling catch block. Map edge cases for localStorage.
+## The [INSTRUMENTER] Queue
+* 🛡️ `js/games/spell-it-out.js:199`: Missing error-handling catch block. Map edge cases for localStorage.
+* 🛡️ `js/games/rocket-ride.js:988`: Missing error-handling catch block. Map edge cases for localStorage.
+* 🛡️ `js/games/rocket-ride.js:989`: Missing error-handling catch block. Map edge cases for localStorage.
+* 🛡️ `js/games/memory-match.js:97`: Missing error-handling catch block. Map edge cases for localStorage.
+* 🛡️ `js/games/memory-match.js:101`: Missing error-handling catch block. Map edge cases for localStorage.
+* 🛡️ `js/games/balloon-float.js:1066`: Missing error-handling catch block. Map edge cases for localStorage.

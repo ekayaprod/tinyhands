@@ -1,0 +1,1 @@
+- Bootstrapped .github/workflows/pages.yml to enable GitHub Pages deployment.
