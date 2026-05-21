@@ -227,7 +227,6 @@ function saveProgress(levelJustCompleted) {
 window.__melodyUnlockAll = function() {
   try {
     localStorage.setItem(LS_KEY, JSON.stringify({ highestUnlocked: MELODIES.length }));
-    console.log('All melody levels unlocked!');
   } catch(e) { console.error(e); }
 };
 
