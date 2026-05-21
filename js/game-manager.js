@@ -33,6 +33,17 @@ const postgameNudgeCopied = document.getElementById('postgameNudgeCopied');
 // ---- Floating background emojis ----
 createBgEmojis(landing);
 
+// 🕯️ CHRONICLE: AST reasoning maps the RegExp device/browser detection logic; Git history explains the business intent behind isolating these specific platforms.
+
+/**
+ * Validates the user's platform via User-Agent and maxTouchPoints.
+ * * Historical Intent: Added via commits 0a8a1c6d, 466fe42d, e4ccfb02, and 0a0929ac (Mar 2026).
+ * * Business Reasoning: iOS Safari triggers security warnings for fullscreen touches,
+ *   requiring an API bypass (0a8a1c6d). PWA "Add to Home Screen" prompts are only native
+ *   to Safari on iOS, not WebKit wrappers like Chrome/Brave (e4ccfb02). macOS Safari
+ *   supports "Add to Dock" functionality (0a0929ac). iPadOS 13+ disguises itself as
+ *   "MacIntel" but is caught via maxTouchPoints > 1 validation.
+ */
 // ---- Platform detection ----
 // iPadOS 13+ reports "MacIntel" but has touch — second check catches it
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
