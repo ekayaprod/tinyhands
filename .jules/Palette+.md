@@ -1,0 +1,1 @@
+- **Applied Patterns:** Injected `transition: all 0.3s ease-in-out` and explicit `:focus-visible` rings (`outline: none; box-shadow: 0 0 0 3px ...`) to interactive elements across multiple games (`memory-match.css`, `balloon-float.css`, `spell-it-out.css`) to elevate the design and provide clear visual feedback without abrupt state changes.

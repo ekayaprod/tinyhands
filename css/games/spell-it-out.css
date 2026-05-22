@@ -266,7 +266,12 @@
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.spell-key:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 92, 252, 0.4);
 }
 
 .spell-key:active {
