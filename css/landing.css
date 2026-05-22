@@ -521,10 +521,10 @@
 
 /* ===== Game Cards Grid ===== */
 .games-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   justify-content: center;
-  flex-wrap: wrap;
   z-index: 10;
   position: relative;
   scroll-margin-top: 2rem;
@@ -535,7 +535,9 @@
   background: var(--color-surface);
   border-radius: 24px;
   padding: 2rem 1.5rem;
-  width: 280px;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -598,8 +600,8 @@
   position: absolute;
   top: 10px;
   right: 12px;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border: none;
   border-radius: 50%;
   background: transparent;
@@ -617,7 +619,13 @@
   justify-content: center;
   -webkit-tap-highlight-color: transparent;
 }
-.card-info-btn:hover {
+@media (hover: hover) and (pointer: fine) {
+  .card-info-btn:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+  }
+}
+.card-info-btn:active {
   color: var(--color-primary);
   background: var(--color-primary-light);
 }
@@ -655,9 +663,11 @@
 }
 
 /* Disable card hover lift when flipped */
-.game-card.flipped:hover {
-  transform: none;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+@media (hover: hover) and (pointer: fine) {
+  .game-card.flipped:hover {
+    transform: none;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+  }
 }
 .game-card.flipped:active {
   transform: none;
@@ -715,9 +725,14 @@ body.game-active .bg-emoji {
   50%      { transform: translateY(-15px) rotate(8deg); }
 }
 
-.game-card:hover {
-  transform: scale(1.04) translateY(-4px);
-  box-shadow: 0 12px 40px rgba(124, 107, 191, 0.12);
+@media (hover: hover) and (pointer: fine) {
+  .game-card:hover {
+    transform: scale(1.04) translateY(-4px);
+    box-shadow: 0 12px 40px rgba(124, 107, 191, 0.12);
+  }
+}
+.game-card:active {
+  transform: scale(0.98);
 }
 
 
@@ -780,6 +795,7 @@ body.game-active .bg-emoji {
   font-size: 1rem;
   font-weight: 700;
   padding: 0.5em 2em;
+  min-height: 44px;
   border: none;
   border-radius: 50px;
   color: #fff;
@@ -799,9 +815,11 @@ body.game-active .bg-emoji {
 .play-btn.accent-indigo { background: #F4845F; }
 .play-btn.accent-green  { background: #F4845F; }
 
-.play-btn:hover {
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+@media (hover: hover) and (pointer: fine) {
+  .play-btn:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  }
 }
 
 .play-btn:active {
