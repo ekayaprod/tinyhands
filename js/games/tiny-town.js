@@ -408,6 +408,26 @@ function drawSpriteFlipped(c, emoji, x, y, size) {
 const BLDG_EMOJIS = ['🏢','🏬','🏪','🏨','🏦','🏥','🏫','🏛️','⛪','🏣','🏤','🏢'];
 const HOUSE_EMOJIS = ['🏠','🏡','🏘️'];
 
+function tryPlaceBuilding(ex, ry, size, emoji, spurClear) {
+  for (const e of edges) {
+    if (e.type !== 'city' || (/^c\d\d$/.test(e.a) && /^c\d\d$/.test(e.b))) continue;
+
+    const na = nodeMap[e.a], nb = nodeMap[e.b];
+
+    if (na.x === nb.x && Math.abs(ex - na.x) < spurClear) {
+      const minY = Math.min(na.y, nb.y), maxY = Math.max(na.y, nb.y);
+      if (ry >= minY - 20 && ry <= maxY + 20) return;
+    }
+
+    if (na.y === nb.y && Math.abs(ry - na.y) < spurClear) {
+      const minX = Math.min(na.x, nb.x), maxX = Math.max(na.x, nb.x);
+      if (ex >= minX - 20 && ex <= maxX + 20) return;
+    }
+  }
+
+  buildings.push({ x: ex, y: ry, emoji, size });
+}
+
 function generateBuildings() {
   buildings = [];
   const roadW = 55, sidW = 10;
@@ -430,22 +450,8 @@ function generateBuildings() {
           const size = 58 + Math.floor(Math.random() * 34);
           const ex = bx1 + spacing * i + spacing / 2;
           const emoji = BLDG_EMOJIS[Math.floor(Math.random() * BLDG_EMOJIS.length)];
-          // Skip buildings that overlap city spur roads
           const spurClear = 45;
-          const nearSpur = edges.some(e => {
-            if (e.type !== 'city' || (/^c\d\d$/.test(e.a) && /^c\d\d$/.test(e.b))) return false;
-            const na = nodeMap[e.a], nb = nodeMap[e.b];
-            if (na.x === nb.x && Math.abs(ex - na.x) < spurClear) {
-              const minY = Math.min(na.y, nb.y), maxY = Math.max(na.y, nb.y);
-              if (ry >= minY - 20 && ry <= maxY + 20) return true;
-            }
-            if (na.y === nb.y && Math.abs(ry - na.y) < spurClear) {
-              const minX = Math.min(na.x, nb.x), maxX = Math.max(na.x, nb.x);
-              if (ex >= minX - 20 && ex <= maxX + 20) return true;
-            }
-            return false;
-          });
-          if (!nearSpur) buildings.push({ x: ex, y: ry, emoji, size });
+          tryPlaceBuilding(ex, ry, size, emoji, spurClear);
         }
       }
     }
