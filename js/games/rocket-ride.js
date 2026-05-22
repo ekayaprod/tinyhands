@@ -941,8 +941,8 @@ function wireShare(container) {
     btn.addEventListener('click', async () => {
       const result = await shareOrCopy();
       if (result.method === 'copy' && result.success) {
-        btn.innerHTML = '<img src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Copied!';
-        setTimeout(() => { btn.innerHTML = '<img src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
+        btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Copied!';
+        setTimeout(() => { btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
       }
     });
   }
@@ -990,28 +990,28 @@ function showGameOver() {
 
   const altFmt = altitude.toLocaleString() + 'km';
   const titles = [
-    'CRASH! <img src="' + getEmojiUrl('💥') + '" class="emoji-img inline-emoji" alt="💥">',
+    'CRASH! <img loading="lazy" decoding="async" src="' + getEmojiUrl('💥') + '" class="emoji-img inline-emoji" alt="💥">',
     'Houston, we have a problem!',
-    'BOOM! <img src="' + getEmojiUrl('💫') + '" class="emoji-img inline-emoji" alt="💫">'
+    'BOOM! <img loading="lazy" decoding="async" src="' + getEmojiUrl('💫') + '" class="emoji-img inline-emoji" alt="💫">'
   ];
   const title = titles[Math.floor(Math.random() * titles.length)];
 
   celebrateEl.innerHTML =
     '<div class="rocket-endcard">' +
-      '<div class="rocket-endcard-emoji"><img src="' + getEmojiUrl('💥') + '" class="emoji-img" alt="💥" style="width:100%;height:100%"></div>' +
+      '<div class="rocket-endcard-emoji"><img loading="lazy" decoding="async" src="' + getEmojiUrl('💥') + '" class="emoji-img" alt="💥" style="width:100%;height:100%"></div>' +
       '<div class="rocket-endcard-title">' + title + '</div>' +
       '<div class="rocket-endcard-stats">' +
-        '<span><img src="' + getEmojiUrl('📏') + '" class="emoji-img inline-emoji" alt="📏"> ' + altFmt + '</span>' +
-        '<span><img src="' + getEmojiUrl('⭐') + '" class="emoji-img inline-emoji" alt="⭐"> × ' + starCount + '</span>' +
+        '<span><img loading="lazy" decoding="async" src="' + getEmojiUrl('📏') + '" class="emoji-img inline-emoji" alt="📏"> ' + altFmt + '</span>' +
+        '<span><img loading="lazy" decoding="async" src="' + getEmojiUrl('⭐') + '" class="emoji-img inline-emoji" alt="⭐"> × ' + starCount + '</span>' +
         '<span>Score: ' + score + '</span>' +
       '</div>' +
-      (isNewBest ? '<div class="rocket-endcard-best"><img src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>' :
+      (isNewBest ? '<div class="rocket-endcard-best"><img loading="lazy" decoding="async" src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>' :
        bestScore > 0 ? '<div class="rocket-endcard-best-small">Best: ' + bestScore + '</div>' : '') +
-      (isNewAlt && !isNewBest ? '<div class="rocket-endcard-best"><img src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New altitude record!</div>' : '') +
+      (isNewAlt && !isNewBest ? '<div class="rocket-endcard-best"><img loading="lazy" decoding="async" src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New altitude record!</div>' : '') +
       '<div class="rocket-endcard-actions">' +
         '<button class="rocket-endcard-btn rocket-btn-again">Launch Again</button>' +
       '</div>' +
-      '<button class="endcard-share-btn" data-share><img src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>' +
+      '<button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>' +
     '</div>';
 
   celebrateEl.classList.add('show');
@@ -1709,7 +1709,7 @@ function resetAndStart() {
   if (hintEl) hintEl.remove();
   hintEl = document.createElement('div');
   hintEl.className = 'rocket-hint';
-  hintEl.innerHTML = 'Press any key to launch! <img src="' + getEmojiUrl('🚀') + '" class="emoji-img inline-emoji" alt="🚀">';
+  hintEl.innerHTML = 'Press any key to launch! <img loading="lazy" decoding="async" src="' + getEmojiUrl('🚀') + '" class="emoji-img inline-emoji" alt="🚀">';
   gameEl.appendChild(hintEl);
 
   gameState = 'ready';

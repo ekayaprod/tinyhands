@@ -194,7 +194,7 @@ function startRound(difficulty) {
     el.innerHTML =
       '<div class="memory-card-inner">' +
         '<div class="memory-card-back"></div>' +
-        '<div class="memory-card-front"><img src="' + getEmojiUrl(emoji) + '" class="emoji-img card-emoji" alt="' + emoji + '" draggable="false"></div>' +
+        '<div class="memory-card-front"><img loading="lazy" decoding="async" src="' + getEmojiUrl(emoji) + '" class="emoji-img card-emoji" alt="' + emoji + '" draggable="false"></div>' +
       '</div>';
     memoryBoardEl.appendChild(el);
     return { emoji, index: i, matched: false, element: el };
@@ -311,14 +311,14 @@ function triggerWin() {
   setTimeout(() => {
     memoryCelebrateEl.innerHTML =
       '<div class="memory-endcard">' +
-        '<div class="memory-endcard-emoji"><img src="' + getEmojiUrl('\u{1F389}') + '" class="emoji-img" alt="🎉"></div>' +
+        '<div class="memory-endcard-emoji"><img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{1F389}') + '" class="emoji-img" alt="🎉"></div>' +
         '<div class="memory-endcard-title">You found them all!</div>' +
         '<div class="memory-endcard-stats">' +
-          '<span><img src="' + getEmojiUrl('\u{23F1}') + '" class="emoji-img inline-emoji" alt="⏱"> ' + fmt(elapsedSeconds) + '</span>' +
-          '<span><img src="' + getEmojiUrl('\u{1F504}') + '" class="emoji-img inline-emoji" alt="🔄"> ' + flipCount + ' flips</span>' +
+          '<span><img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{23F1}') + '" class="emoji-img inline-emoji" alt="⏱"> ' + fmt(elapsedSeconds) + '</span>' +
+          '<span><img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{1F504}') + '" class="emoji-img inline-emoji" alt="🔄"> ' + flipCount + ' flips</span>' +
         '</div>' +
         (isNewBest
-          ? '<div class="memory-endcard-best"><img src="' + getEmojiUrl('\u{1F3C6}') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>'
+          ? '<div class="memory-endcard-best"><img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{1F3C6}') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>'
           : (best.flips > 0
               ? '<div class="memory-endcard-best-small">Best: ' + best.flips + ' flips, ' + fmt(best.time) + '</div>'
               : '')) +
@@ -326,7 +326,7 @@ function triggerWin() {
           '<button class="memory-endcard-btn memory-btn-again">Play Again</button>' +
           '<button class="memory-endcard-btn memory-btn-diff">Change Difficulty</button>' +
         '</div>' +
-        '<button class="endcard-share-btn" data-share><img src="' + getEmojiUrl('\u{1F4E4}') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>' +
+        '<button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{1F4E4}') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>' +
       '</div>';
 
     memoryCelebrateEl.classList.add('show');
@@ -349,8 +349,8 @@ function wireShare(container) {
     e.stopPropagation();
     const result = await shareOrCopy();
     if (result.method === 'copy' && result.success) {
-      btn.innerHTML = '<img src="' + getEmojiUrl('\u{2705}') + '" class="emoji-img btn-emoji" alt="✅"> Link copied!';
-      setTimeout(() => { btn.innerHTML = '<img src="' + getEmojiUrl('\u{1F4E4}') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
+      btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{2705}') + '" class="emoji-img btn-emoji" alt="✅"> Link copied!';
+      setTimeout(() => { btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('\u{1F4E4}') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
     }
   });
   btn.addEventListener('touchend', (e) => e.stopPropagation());

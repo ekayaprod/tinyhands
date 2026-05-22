@@ -237,7 +237,7 @@ export class SongParadeEngine {
 
       const icon = document.createElement('span');
       icon.className = 'melody-mode-icon';
-      const img = document.createElement('img');
+      const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
       img.src = this.getEmojiUrl(song.emoji);
       img.className = 'emoji-img';
       img.alt = song.emoji;
@@ -272,7 +272,7 @@ export class SongParadeEngine {
     this.tempoLabelEl.className = 'parade-tempo-label';
 
     const makeTempoBtnImg = (emoji, alt) => {
-      const img = document.createElement('img');
+      const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
       img.src = this.getEmojiUrl(emoji);
       img.className = 'emoji-img';
       img.alt = alt;
@@ -383,7 +383,7 @@ export class SongParadeEngine {
 
     this.whaleEl = document.createElement('div');
     this.whaleEl.className = 'parade-whale';
-    const whaleImg = document.createElement('img');
+    const whaleImg = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     whaleImg.src = this.getEmojiUrl(WHALE_EMOJI);
     whaleImg.className = 'emoji-img';
     whaleImg.alt = WHALE_EMOJI;
@@ -425,7 +425,7 @@ export class SongParadeEngine {
     // Move tempo controls into top bar
     this.topBarEl.appendChild(this.tempoWrap);
     this.songNameEl.innerHTML = '';
-    const emojiImg = document.createElement('img');
+    const emojiImg = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     emojiImg.src = this.getEmojiUrl(this.song.emoji);
     emojiImg.className = 'emoji-img parade-song-name-icon';
     emojiImg.alt = this.song.emoji;
@@ -763,7 +763,7 @@ export class SongParadeEngine {
   spawnWaterDrop() {
     const drop = document.createElement('div');
     drop.className = 'parade-splash-drop';
-    const img = document.createElement('img');
+    const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     img.src = this.getEmojiUrl(SPLASH_EMOJI);
     img.className = 'emoji-img';
     img.alt = SPLASH_EMOJI;
@@ -816,7 +816,7 @@ export class SongParadeEngine {
 
     const emojiDiv = document.createElement('div');
     emojiDiv.className = 'melody-celebrate-emoji';
-    const img = document.createElement('img');
+    const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     img.src = this.getEmojiUrl(WHALE_EMOJI);
     img.className = 'emoji-img';
     img.alt = WHALE_EMOJI;

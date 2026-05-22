@@ -17,8 +17,8 @@ function wireEndcardShare(container) {
     e.stopPropagation();
     const result = await shareOrCopy();
     if (result.method === 'copy' && result.success) {
-      btn.innerHTML = '<img src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Copied!';
-      setTimeout(() => { btn.innerHTML = '<img src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
+      btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Copied!';
+      setTimeout(() => { btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
     }
   });
   btn.addEventListener('touchend', (e) => e.stopPropagation());
@@ -503,8 +503,8 @@ function stTriggerCollapse() {
   stackTowerEl.style.transition = 'transform 1s ease-in';
   stackTowerEl.style.transform = `rotate(${collapseDir * 25}deg)`;
 
-  const bestText = stIsNewBest ? `<div class="stack-endcard-best"><img src="${getEmojiUrl('🏆')}" class="emoji-img inline-emoji" alt="🏆"> New best!</div>` : '';
-  stackCelebrate.innerHTML = `<div class="stack-endcard"><div class="stack-endcard-emoji"><img src="${getEmojiUrl('💥')}" class="emoji-img" alt="💥" style="width:1em;height:1em"></div><div class="stack-endcard-title">${stBlockCount} blocks!</div>${bestText}<div class="stack-endcard-hint">Tap to play again</div><button class="endcard-share-btn" data-share><img src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button></div>`;
+  const bestText = stIsNewBest ? `<div class="stack-endcard-best"><img loading="lazy" decoding="async" src="${getEmojiUrl('🏆')}" class="emoji-img inline-emoji" alt="🏆"> New best!</div>` : '';
+  stackCelebrate.innerHTML = `<div class="stack-endcard"><div class="stack-endcard-emoji"><img loading="lazy" decoding="async" src="${getEmojiUrl('💥')}" class="emoji-img" alt="💥" style="width:1em;height:1em"></div><div class="stack-endcard-title">${stBlockCount} blocks!</div>${bestText}<div class="stack-endcard-hint">Tap to play again</div><button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button></div>`;
   stackCelebrate.classList.add('show');
   wireEndcardShare(stackCelebrate);
 }
@@ -550,8 +550,8 @@ function stTriggerTowerComplete() {
     stackGameEl.appendChild(e);
   }
 
-  const bestText = stIsNewBest ? `<div class="stack-endcard-best"><img src="${getEmojiUrl('🏆')}" class="emoji-img inline-emoji" alt="🏆"> New best!</div>` : '';
-  stackCelebrate.innerHTML = `<div class="stack-endcard"><div class="stack-endcard-emoji"><img src="${getEmojiUrl('🏆')}" class="emoji-img" alt="🏆" style="width:1em;height:1em"></div><div class="stack-endcard-title">You Win!</div><div class="stack-endcard-stats">${stBlockCount} blocks stacked!</div>${bestText}<div class="stack-endcard-hint">Tap to play again</div><button class="endcard-share-btn" data-share><img src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button></div>`;
+  const bestText = stIsNewBest ? `<div class="stack-endcard-best"><img loading="lazy" decoding="async" src="${getEmojiUrl('🏆')}" class="emoji-img inline-emoji" alt="🏆"> New best!</div>` : '';
+  stackCelebrate.innerHTML = `<div class="stack-endcard"><div class="stack-endcard-emoji"><img loading="lazy" decoding="async" src="${getEmojiUrl('🏆')}" class="emoji-img" alt="🏆" style="width:1em;height:1em"></div><div class="stack-endcard-title">You Win!</div><div class="stack-endcard-stats">${stBlockCount} blocks stacked!</div>${bestText}<div class="stack-endcard-hint">Tap to play again</div><button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button></div>`;
   stackCelebrate.classList.add('show');
   wireEndcardShare(stackCelebrate);
 }
