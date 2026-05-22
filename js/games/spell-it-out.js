@@ -17,8 +17,8 @@ function wireEndcardShare(container) {
     e.stopPropagation();
     const result = await shareOrCopy();
     if (result.method === 'copy' && result.success) {
-      btn.innerHTML = '<img src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Copied!';
-      setTimeout(() => { btn.innerHTML = '<img src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
+      btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Copied!';
+      setTimeout(() => { btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
     }
   });
   btn.addEventListener('touchend', (e) => e.stopPropagation());
@@ -378,7 +378,7 @@ function handleWrong(blankTile, letter) {
 }
 
 function showFeedback(emoji, text, type) {
-  spellFeedbackEl.innerHTML = '<img src="' + getEmojiUrl(emoji) + '" class="emoji-img inline-emoji" alt="' + emoji + '"> ' + text;
+  spellFeedbackEl.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl(emoji) + '" class="emoji-img inline-emoji" alt="' + emoji + '"> ' + text;
   spellFeedbackEl.className = 'spell-feedback spell-feedback-' + type;
   spellFeedbackEl.classList.add('spell-feedback-show');
 }
@@ -408,13 +408,13 @@ function triggerGameOver() {
 
   spellCelebrateEl.innerHTML = `
     <div class="spell-endcard">
-      <div class="spell-endcard-emoji"><img src="${getEmojiUrl('😅')}" class="emoji-img" alt="😅"></div>
+      <div class="spell-endcard-emoji"><img loading="lazy" decoding="async" src="${getEmojiUrl('😅')}" class="emoji-img" alt="😅"></div>
       <div class="spell-endcard-title">Game Over!</div>
       <div class="spell-endcard-score">Score: ${score}</div>
-      ${isNewBest ? '<div class="spell-endcard-best"><img src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>' :
+      ${isNewBest ? '<div class="spell-endcard-best"><img loading="lazy" decoding="async" src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>' :
         bestScore > 0 ? `<div class="spell-endcard-best-small">Best: ${bestScore}</div>` : ''}
       <div class="spell-endcard-restart">Tap or press Space to play again</div>
-      <button class="endcard-share-btn" data-share><img src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>
+      <button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>
     </div>
   `;
   spellCelebrateEl.classList.add('show');
@@ -430,12 +430,12 @@ function triggerWin() {
 
   spellCelebrateEl.innerHTML = `
     <div class="spell-endcard">
-      <div class="spell-endcard-emoji"><img src="${getEmojiUrl('🏆')}" class="emoji-img" alt="🏆"></div>
+      <div class="spell-endcard-emoji"><img loading="lazy" decoding="async" src="${getEmojiUrl('🏆')}" class="emoji-img" alt="🏆"></div>
       <div class="spell-endcard-title">You spelled them ALL!</div>
       <div class="spell-endcard-score">Score: ${score} / ${WORD_POOL.length}</div>
-      <div class="spell-endcard-best">Amazing! <img src="${getEmojiUrl('🎉')}" class="emoji-img inline-emoji" alt="🎉"></div>
+      <div class="spell-endcard-best">Amazing! <img loading="lazy" decoding="async" src="${getEmojiUrl('🎉')}" class="emoji-img inline-emoji" alt="🎉"></div>
       <div class="spell-endcard-restart">Tap or press Space to play again</div>
-      <button class="endcard-share-btn" data-share><img src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>
+      <button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="${getEmojiUrl('📤')}" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>
     </div>
   `;
   spellCelebrateEl.classList.add('show');

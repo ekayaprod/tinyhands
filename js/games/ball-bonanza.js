@@ -307,7 +307,7 @@ function showDizzyStars(char) {
 function showEventText(emoji, text, x, y) {
   const el = document.createElement('div');
   el.className = 'bb-event-text';
-  el.innerHTML = '<img src="' + getEmojiUrl(emoji) + '" class="emoji-img inline-emoji" alt="' + emoji + '"> ' + text;
+  el.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl(emoji) + '" class="emoji-img inline-emoji" alt="' + emoji + '"> ' + text;
   el.style.left = x + 'px';
   el.style.top = y + 'px';
   gameEl.appendChild(el);

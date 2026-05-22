@@ -444,7 +444,7 @@ function keyCascade() {
 function showTeacher(state, speech, speechEmoji) {
   teacherEl.className = 'melody-teacher ' + (state || '');
   teacherEl.innerHTML = '';
-  const img = document.createElement('img');
+  const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
   img.src = getEmojiUrl(TEACHER_EMOJI);
   img.className = 'emoji-img';
   img.alt = TEACHER_EMOJI;
@@ -453,7 +453,7 @@ function showTeacher(state, speech, speechEmoji) {
   // Build speech with optional inline Fluent 3D emoji
   teacherSpeechEl.innerHTML = '';
   if (speechEmoji) {
-    const eImg = document.createElement('img');
+    const eImg = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     eImg.src = getEmojiUrl(speechEmoji);
     eImg.className = 'emoji-img';
     eImg.alt = speechEmoji;
@@ -585,21 +585,21 @@ function buildLevelGrid() {
 
     if (levelNum > highestUnlocked) {
       tile.classList.add('locked');
-      var lockImg = document.createElement('img');
+      var lockImg = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
       lockImg.src = getEmojiUrl('🔒');
       lockImg.className = 'emoji-img melody-level-lock';
       lockImg.alt = '🔒';
       tile.appendChild(lockImg);
     } else if (levelNum < highestUnlocked) {
       tile.classList.add('completed');
-      var starImg = document.createElement('img');
+      var starImg = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
       starImg.src = getEmojiUrl('⭐');
       starImg.className = 'emoji-img melody-level-star';
       starImg.alt = '⭐';
       tile.appendChild(starImg);
     } else {
       tile.classList.add('current');
-      var emojiImg = document.createElement('img');
+      var emojiImg = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
       emojiImg.src = getEmojiUrl(melody.emoji);
       emojiImg.className = 'emoji-img melody-level-emoji';
       emojiImg.alt = melody.emoji;
@@ -801,7 +801,7 @@ function showReplayBtn(state) {
   if (!replayBtnEl) {
     replayBtnEl = document.createElement('button');
     replayBtnEl.className = 'melody-replay-btn';
-    const img = document.createElement('img');
+    const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     img.src = getEmojiUrl('🔄');
     img.className = 'emoji-img';
     img.alt = '🔄';
@@ -847,7 +847,7 @@ function showSpeedToggle(visible) {
 function updateSpeedToggleIcon() {
   if (!speedToggleEl) return;
   speedToggleEl.innerHTML = '';
-  const img = document.createElement('img');
+  const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
   img.src = getEmojiUrl(isSlowMode ? '🐢' : '🐇');
   img.className = 'emoji-img';
   img.alt = isSlowMode ? 'Slow' : 'Fast';
@@ -1127,7 +1127,7 @@ function onAllComplete() {
 
   const emoji = document.createElement('div');
   emoji.className = 'melody-celebrate-emoji melody-grand-finale';
-  const img = document.createElement('img');
+  const img = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
   img.src = getEmojiUrl('🏆');
   img.className = 'emoji-img';
   img.alt = '🏆';

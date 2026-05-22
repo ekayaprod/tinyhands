@@ -111,14 +111,14 @@ export function getSprite(emoji, size, dpr) {
  *  DOM API — for DOM-based games (splat-keys, ball-bonanza, etc.)
  * ------------------------------------------------------------------ */
 
-/** Create an <img> element for an emoji (or fallback <span> with text).
+/** Create an <img loading="lazy" decoding="async"> element for an emoji (or fallback <span> with text).
  *  @param {string} emoji     - Emoji character
  *  @param {string} [className] - Optional CSS class name
- *  @returns {HTMLElement} <img> or <span> element */
+ *  @returns {HTMLElement} <img loading="lazy" decoding="async"> or <span> element */
 export function createEmojiImg(emoji, className) {
   const img = imageCache[emoji];
   if (img) {
-    const el = document.createElement('img');
+    const el = Object.assign(document.createElement('img'), { loading: 'lazy', decoding: 'async' });
     el.src = getEmojiUrl(emoji);
     el.alt = emoji;
     el.draggable = false;

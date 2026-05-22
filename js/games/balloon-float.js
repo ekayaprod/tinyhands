@@ -1068,7 +1068,7 @@ function showGameOver() {
   }
 
   const bestText = isNewBest
-    ? '<div class="balloon-endcard-best"><img src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>'
+    ? '<div class="balloon-endcard-best"><img loading="lazy" decoding="async" src="' + getEmojiUrl('🏆') + '" class="emoji-img inline-emoji" alt="🏆"> New Best!</div>'
     : (bestScore > 0
         ? '<div class="balloon-endcard-best-small">Best: ' + bestScore + '</div>'
         : '');
@@ -1080,18 +1080,18 @@ function showGameOver() {
 
   celebrateEl.innerHTML =
     '<div class="balloon-endcard">' +
-      '<div class="balloon-endcard-emoji"><img src="' + getEmojiUrl('💥') + '" class="emoji-img" alt="💥" style="width:100%;height:100%"></div>' +
+      '<div class="balloon-endcard-emoji"><img loading="lazy" decoding="async" src="' + getEmojiUrl('💥') + '" class="emoji-img" alt="💥" style="width:100%;height:100%"></div>' +
       '<div class="balloon-endcard-title">POP!</div>' +
       '<div class="balloon-endcard-stats">' +
         '<span>Score: ' + score + '</span>' +
-        '<span><img src="' + getEmojiUrl('⏱') + '" class="emoji-img inline-emoji" alt="⏱"> ' + timeFmt + '</span>' +
-        (starsCollected > 0 ? '<span><img src="' + getEmojiUrl('✨') + '" class="emoji-img inline-emoji" alt="✨"> ' + starsCollected + '</span>' : '') +
+        '<span><img loading="lazy" decoding="async" src="' + getEmojiUrl('⏱') + '" class="emoji-img inline-emoji" alt="⏱"> ' + timeFmt + '</span>' +
+        (starsCollected > 0 ? '<span><img loading="lazy" decoding="async" src="' + getEmojiUrl('✨') + '" class="emoji-img inline-emoji" alt="✨"> ' + starsCollected + '</span>' : '') +
       '</div>' +
       bestText +
       '<div class="balloon-endcard-actions">' +
         '<button class="balloon-endcard-btn balloon-btn-again">Play Again</button>' +
       '</div>' +
-      '<button class="endcard-share-btn" data-share><img src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>' +
+      '<button class="endcard-share-btn" data-share><img loading="lazy" decoding="async" src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent</button>' +
     '</div>';
 
   celebrateEl.classList.add('show');
@@ -1111,8 +1111,8 @@ function wireShare(container) {
     e.stopPropagation();
     const result = await shareOrCopy();
     if (result.method === 'copy' && result.success) {
-      btn.innerHTML = '<img src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Link copied!';
-      setTimeout(() => { btn.innerHTML = '<img src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
+      btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('✅') + '" class="emoji-img btn-emoji" alt="✅"> Link copied!';
+      setTimeout(() => { btn.innerHTML = '<img loading="lazy" decoding="async" src="' + getEmojiUrl('📤') + '" class="emoji-img btn-emoji" alt="📤"> Share with a parent'; }, 2500);
     }
   });
   btn.addEventListener('touchend', (e) => e.stopPropagation());
@@ -1646,7 +1646,7 @@ function resetAndStart() {
   if (hintEl) hintEl.remove();
   hintEl = document.createElement('div');
   hintEl.className = 'balloon-hint';
-  hintEl.innerHTML = 'Tap to fly! <img src="' + getEmojiUrl('🎈') + '" class="emoji-img inline-emoji" alt="🎈">';
+  hintEl.innerHTML = 'Tap to fly! <img loading="lazy" decoding="async" src="' + getEmojiUrl('🎈') + '" class="emoji-img inline-emoji" alt="🎈">';
   gameEl.appendChild(hintEl);
 
   gameState = 'ready';
