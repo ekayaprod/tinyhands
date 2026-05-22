@@ -45,10 +45,15 @@
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.85);
   cursor: url("../../assets/emoji/cursors/hand-point-32.png") 16 4, pointer !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: all 0.3s ease-in-out;
   -webkit-tap-highlight-color: transparent;
   min-width: 140px;
   font-family: inherit;
+}
+
+.memory-diff-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 107, 191, 0.4);
 }
 
 .memory-diff-btn:hover {
@@ -344,7 +349,12 @@
   border-radius: 50px;
   cursor: url("../../assets/emoji/cursors/hand-point-32.png") 16 4, pointer !important;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.memory-endcard-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 107, 191, 0.4);
 }
 
 .memory-btn-again {

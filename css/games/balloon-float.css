@@ -188,7 +188,12 @@
   border-radius: 50px;
   cursor: url("../../assets/emoji/cursors/hand-point-32.png") 16 4, pointer !important;
   -webkit-tap-highlight-color: transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.balloon-endcard-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(107, 175, 207, 0.4);
 }
 
 .balloon-btn-again {
