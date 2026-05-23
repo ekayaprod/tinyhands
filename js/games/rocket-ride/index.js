@@ -7,10 +7,10 @@ import {
   initAudio, playRocketBoost, playBoostRelease, playRocketStarCollect,
   playFuelCanCollect, playAsteroidNearMiss, playRocketCrash,
   playMilestoneChime, playCountdownBeep, playLaunchRumble, playWinFanfare
-} from '../audio.js';
-import { shareOrCopy } from '../share.js';
-import { preloadEmojis, getImage, createEmojiImg, getEmojiUrl } from '../emoji.js';
-import { EMOJI_REGISTRY } from '../emoji-registry.js';
+} from '../../audio.js';
+import { shareOrCopy } from '../../share.js';
+import { preloadEmojis, getImage, createEmojiImg, getEmojiUrl } from '../../emoji.js';
+import { EMOJI_REGISTRY } from '../../emoji-registry.js';
 import {
   GRAVITY, BOOST_FORCE, BRAKE_FORCE, HORIZONTAL_FORCE, MAX_HORIZONTAL_VEL, MAX_VERTICAL_VEL, HORIZONTAL_DAMPING, VERTICAL_DAMPING, BRAKE_DAMPING, MAX_TILT, TILT_LERP, BASE_SCROLL_SPEED, SCROLL_ACCELERATION, MAX_SCROLL_SPEED, SCROLL_GRAVITY_FACTOR, PIXELS_PER_METER, ROCKET_RADIUS, HITBOX_SCALE, NEAR_MISS_DIST, OBS_SPAWN_START, OBS_SPAWN_MIN, MIN_GAP_Y, OBS_ASTEROID_S, OBS_ASTEROID_M, OBS_ASTEROID_L, OBS_SATELLITE, OBS_JUNK, OBS_UFO, STAR_SPAWN_INTERVAL, STAR_SIZE, STAR_POINTS, FUEL_SPAWN_INTERVAL, FUEL_SIZE, FUEL_DURATION, CLUSTER_SPAWN_INTERVAL, CLUSTER_SIZE, CLUSTER_BONUS, LS_BEST_KEY, LS_ALT_KEY, MILESTONES
 } from './constants.js';
