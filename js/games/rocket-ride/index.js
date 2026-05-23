@@ -11,67 +11,13 @@ import {
 import { shareOrCopy } from '../share.js';
 import { preloadEmojis, getImage, createEmojiImg, getEmojiUrl } from '../emoji.js';
 import { EMOJI_REGISTRY } from '../emoji-registry.js';
+import {
+  GRAVITY, BOOST_FORCE, BRAKE_FORCE, HORIZONTAL_FORCE, MAX_HORIZONTAL_VEL, MAX_VERTICAL_VEL, HORIZONTAL_DAMPING, VERTICAL_DAMPING, BRAKE_DAMPING, MAX_TILT, TILT_LERP, BASE_SCROLL_SPEED, SCROLL_ACCELERATION, MAX_SCROLL_SPEED, SCROLL_GRAVITY_FACTOR, PIXELS_PER_METER, ROCKET_RADIUS, HITBOX_SCALE, NEAR_MISS_DIST, OBS_SPAWN_START, OBS_SPAWN_MIN, MIN_GAP_Y, OBS_ASTEROID_S, OBS_ASTEROID_M, OBS_ASTEROID_L, OBS_SATELLITE, OBS_JUNK, OBS_UFO, STAR_SPAWN_INTERVAL, STAR_SIZE, STAR_POINTS, FUEL_SPAWN_INTERVAL, FUEL_SIZE, FUEL_DURATION, CLUSTER_SPAWN_INTERVAL, CLUSTER_SIZE, CLUSTER_BONUS, LS_BEST_KEY, LS_ALT_KEY, MILESTONES
+} from './constants.js';
+
 
 // ---- Physics constants ----
-const GRAVITY            = 1.2;
-const BOOST_FORCE        = -6.0;
-const BRAKE_FORCE        = 2.0;
-const HORIZONTAL_FORCE   = 18.0;
-const MAX_HORIZONTAL_VEL = 24.0;
-const MAX_VERTICAL_VEL   = 5.5;
-const HORIZONTAL_DAMPING = 0.91;
-const VERTICAL_DAMPING   = 0.96;
-const BRAKE_DAMPING      = 0.85;
-const MAX_TILT           = 30 * Math.PI / 180;  // 30 degrees in radians
-const TILT_LERP          = 0.18;
 
-// ---- Scroll constants ----
-const BASE_SCROLL_SPEED     = 2.0;
-const SCROLL_ACCELERATION   = 0.001;
-const MAX_SCROLL_SPEED      = 6.0;
-const SCROLL_GRAVITY_FACTOR = 0.3;
-const PIXELS_PER_METER      = 4;
-
-// ---- Collision ----
-const ROCKET_RADIUS  = 24;
-const HITBOX_SCALE   = 0.75;
-const NEAR_MISS_DIST = 18;
-
-// ---- Obstacle spawning ----
-const OBS_SPAWN_START    = 1.4;
-const OBS_SPAWN_MIN      = 0.4;
-const MIN_GAP_Y          = 110;
-
-// ---- Obstacle types ----
-const OBS_ASTEROID_S  = 'asteroid_s';
-const OBS_ASTEROID_M  = 'asteroid_m';
-const OBS_ASTEROID_L  = 'asteroid_l';
-const OBS_SATELLITE   = 'satellite';
-const OBS_JUNK        = 'junk';
-const OBS_UFO         = 'ufo';
-
-// ---- Collectible constants ----
-const STAR_SPAWN_INTERVAL    = 3.0;
-const STAR_SIZE              = 32;
-const STAR_POINTS            = 10;
-const FUEL_SPAWN_INTERVAL    = 30;
-const FUEL_SIZE              = 38;
-const FUEL_DURATION          = 3.0;
-const CLUSTER_SPAWN_INTERVAL = 20;
-const CLUSTER_SIZE           = 5;
-const CLUSTER_BONUS          = 100;
-
-// ---- Scoring ----
-const LS_BEST_KEY = 'tinyhandsplay-rocket-best';
-const LS_ALT_KEY  = 'tinyhandsplay-rocket-altitude';
-
-// ---- Milestones ----
-const MILESTONES = [
-  { alt: 500,  text: 'Nice flying!', emoji: '🚀' },
-  { alt: 1000, text: 'Space explorer!', emoji: '🌟' },
-  { alt: 2000, text: 'To infinity!', emoji: '✨' },
-  { alt: 5000, text: 'Legendary pilot!', emoji: '👨‍🚀' },
-];
 
 // ---- DOM refs ----
 const gameEl      = document.getElementById('rocketGame');

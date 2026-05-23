@@ -8,9 +8,6 @@
 > - Do not delete this file.
 
 ## The [REFACTORER] Queue
-* 🏗️ `js/games/tiny-town.js`: 3026 lines. Split into domain modules and colocate dependencies.
-* 🏗️ `js/games/rocket-ride.js`: 1858 lines. Split into domain modules and colocate dependencies.
-* 🏗️ `js/games/balloon-float.js`: 1753 lines. Split into domain modules and colocate dependencies.
 
 ## The [PRUNER] Queue
 

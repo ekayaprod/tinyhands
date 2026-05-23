@@ -13,87 +13,13 @@ import {
 import { shareOrCopy } from '../share.js';
 import { preloadEmojis, getImage, createEmojiImg, getEmojiUrl } from '../emoji.js';
 import { EMOJI_REGISTRY } from '../emoji-registry.js';
+import {
+  GRAVITY, BUOYANCY, TAP_BOOST, MAX_VY, DAMPING, DRIFT_AMPLITUDE, DRIFT_PERIOD, BOB_AMPLITUDE, BOB_FREQUENCY, BALLOON_RADIUS, HITBOX_SCALE, NEAR_MISS_DIST, OBS_BASE_SPEED, SPAWN_INTERVAL_START, SPAWN_INTERVAL_MIN, MIN_GAP_Y, LS_KEY, OBS_KITE, OBS_EAGLE, OBS_PARACHUTE, OBS_SMALL_PLANE, OBS_BAT, OBS_METEOR, OBS_PLANE, STAR_SPAWN_INTERVAL, STAR_SIZE, PU_SHIELD, PU_RAINBOW, PU_MAGNET, PU_SLOWMO, PU_MYSTERY, POWERUP_SPAWN_START, POWERUP_SPAWN_BASE, POWERUP_SPAWN_VAR, POWERUP_SIZE, SHIELD_DURATION, POWERUP_WEIGHTS, POWERUP_EMOJIS, POWERUP_DURATIONS, MAGNET_RADIUS, MAGNET_STRENGTH, EXTRALIFE_SPAWN_INTERVAL, EXTRALIFE_CHANCE
+} from './constants.js';
+
 
 // ---- Physics constants ----
-const GRAVITY         = 0.12;
-const BUOYANCY        = 0.03;
-const TAP_BOOST       = -3.0;
-const MAX_VY          = 4.0;
-const DAMPING         = 0.98;
-const DRIFT_AMPLITUDE = 30;
-const DRIFT_PERIOD    = 4;
-const BOB_AMPLITUDE   = 2;
-const BOB_FREQUENCY   = 0.03;
 
-// ---- Collision ----
-const BALLOON_RADIUS  = 36;
-const HITBOX_SCALE    = 0.75;
-const NEAR_MISS_DIST  = 22;
-
-// ---- Obstacle spawning ----
-const OBS_BASE_SPEED       = 2.0;
-const SPAWN_INTERVAL_START = 2.5;
-const SPAWN_INTERVAL_MIN   = 0.9;
-const MIN_GAP_Y            = 180;
-
-// ---- Scoring ----
-const LS_KEY = 'tinyhandsplay-balloon-best';
-
-// ---- Obstacle types ----
-const OBS_KITE       = 'kite';
-const OBS_EAGLE      = 'eagle';
-const OBS_PARACHUTE  = 'parachute';
-const OBS_SMALL_PLANE = 'small_plane';
-const OBS_BAT        = 'bat';
-const OBS_METEOR     = 'meteor';
-const OBS_PLANE      = 'plane';
-
-// ---- Star constants ----
-const STAR_SPAWN_INTERVAL = 7.5;
-const STAR_SIZE           = 36;
-
-// ---- Power-up types ----
-const PU_SHIELD  = 'shield';
-const PU_RAINBOW = 'rainbow';
-const PU_MAGNET  = 'magnet';
-const PU_SLOWMO  = 'slowmo';
-const PU_MYSTERY = 'mystery';
-
-// ---- Power-up config ----
-const POWERUP_SPAWN_START = 20;
-const POWERUP_SPAWN_BASE  = 18;
-const POWERUP_SPAWN_VAR   = 8;
-const POWERUP_SIZE        = 44;
-const SHIELD_DURATION     = 8;
-
-const POWERUP_WEIGHTS = [
-  { type: PU_SHIELD,  weight: 15 },
-  { type: PU_RAINBOW, weight: 30 },
-  { type: PU_MAGNET,  weight: 25 },
-  { type: PU_SLOWMO,  weight: 20 },
-  { type: PU_MYSTERY, weight: 10 },
-];
-
-const POWERUP_EMOJIS = {
-  [PU_SHIELD]:  '\u{1F6E1}\uFE0F',
-  [PU_RAINBOW]: '\u{1F308}',
-  [PU_MAGNET]:  '\u{1F9F2}',
-  [PU_SLOWMO]:  '\u{231B}',
-  [PU_MYSTERY]: '\u{1F381}',
-};
-
-const POWERUP_DURATIONS = {
-  [PU_RAINBOW]: 5.0,
-  [PU_MAGNET]:  40.0,
-  [PU_SLOWMO]:  3.0,
-};
-
-const MAGNET_RADIUS   = 360;
-const MAGNET_STRENGTH = 4.0;
-
-// ---- Extra life config ----
-const EXTRALIFE_SPAWN_INTERVAL = 35;
-const EXTRALIFE_CHANCE = 0.4;
 
 // ---- DOM refs ----
 const gameEl      = document.getElementById('balloonGame');
