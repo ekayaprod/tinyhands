@@ -1,4 +1,9 @@
 {
+  "redirects": [
+    { "source": "/js/games/balloon-float.js", "destination": "/js/games/balloon-float/index.js", "permanent": true },
+    { "source": "/js/games/rocket-ride.js", "destination": "/js/games/rocket-ride/index.js", "permanent": true },
+    { "source": "/js/games/tiny-town.js", "destination": "/js/games/tiny-town/index.js", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]
