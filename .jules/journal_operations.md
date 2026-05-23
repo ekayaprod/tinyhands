@@ -1,0 +1,1 @@
+**Instability:** 3 broken Service Worker cache dependencies due to game file restructuring (`balloon-float.js`, `rocket-ride.js`, `tiny-town.js`). | **Fortification:** Updated `sw.js` `SHELL` array to point to the newly nested `index.js` and `constants.js` paths to eradicate 404 installation errors during caching.
