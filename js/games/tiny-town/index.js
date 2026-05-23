@@ -1,6 +1,6 @@
-import { initAudio, getAudioCtx, playWinFanfare, playCrowdRoar, playCrowdCheer } from '../audio.js';
-import { preloadEmojis, getImage } from '../emoji.js';
-import { EMOJI_REGISTRY } from '../emoji-registry.js';
+import { initAudio, getAudioCtx, playWinFanfare, playCrowdRoar, playCrowdCheer } from '../../audio.js';
+import { preloadEmojis, getImage } from '../../emoji.js';
+import { EMOJI_REGISTRY } from '../../emoji-registry.js';
 import {
   MAP_W, PLAYER_SIZE, EMOJI_CURSOR, AREA_RADIUS, CAM_LERP, DEST_ORDER, DELIVERY_ORDER, C, SOUND_MAP, nodeMap, edges, adjacency, DESTINATIONS, DELIVERY_DESTINATIONS, DELIVERY_MAP, SENDER_DIALOGS, RECIPIENT_DIALOGS, HINT_DIALOGS, FINAL_DELIVERY_LINE
 } from './constants.js';

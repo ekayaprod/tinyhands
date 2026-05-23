@@ -9,10 +9,10 @@ import {
   playPowerupCollect, playShieldActivate, playShieldBreak,
   playRainbowActivate, playMagnetActivate, playSlowMoActivate,
   playMysteryBoxOpen, playMysteryBoxReveal, playLifeLost
-} from '../audio.js';
-import { shareOrCopy } from '../share.js';
-import { preloadEmojis, getImage, createEmojiImg, getEmojiUrl } from '../emoji.js';
-import { EMOJI_REGISTRY } from '../emoji-registry.js';
+} from '../../audio.js';
+import { shareOrCopy } from '../../share.js';
+import { preloadEmojis, getImage, createEmojiImg, getEmojiUrl } from '../../emoji.js';
+import { EMOJI_REGISTRY } from '../../emoji-registry.js';
 import {
   GRAVITY, BUOYANCY, TAP_BOOST, MAX_VY, DAMPING, DRIFT_AMPLITUDE, DRIFT_PERIOD, BOB_AMPLITUDE, BOB_FREQUENCY, BALLOON_RADIUS, HITBOX_SCALE, NEAR_MISS_DIST, OBS_BASE_SPEED, SPAWN_INTERVAL_START, SPAWN_INTERVAL_MIN, MIN_GAP_Y, LS_KEY, OBS_KITE, OBS_EAGLE, OBS_PARACHUTE, OBS_SMALL_PLANE, OBS_BAT, OBS_METEOR, OBS_PLANE, STAR_SPAWN_INTERVAL, STAR_SIZE, PU_SHIELD, PU_RAINBOW, PU_MAGNET, PU_SLOWMO, PU_MYSTERY, POWERUP_SPAWN_START, POWERUP_SPAWN_BASE, POWERUP_SPAWN_VAR, POWERUP_SIZE, SHIELD_DURATION, POWERUP_WEIGHTS, POWERUP_EMOJIS, POWERUP_DURATIONS, MAGNET_RADIUS, MAGNET_STRENGTH, EXTRALIFE_SPAWN_INTERVAL, EXTRALIFE_CHANCE
 } from './constants.js';
