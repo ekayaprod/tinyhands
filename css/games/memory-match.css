@@ -47,7 +47,7 @@
   cursor: url("../../assets/emoji/cursors/hand-point-32.png") 16 4, pointer !important;
   transition: all 0.3s ease-in-out;
   -webkit-tap-highlight-color: transparent;
-  min-width: 140px;
+  min-width: clamp(100px, 30vw, 140px);
   font-family: inherit;
 }
 
@@ -56,10 +56,12 @@
   box-shadow: 0 0 0 3px rgba(124, 107, 191, 0.4);
 }
 
-.memory-diff-btn:hover {
-  transform: scale(1.06) translateY(-3px);
-  box-shadow: 0 8px 25px rgba(124, 107, 191, 0.2);
-  border-color: var(--color-primary);
+@media (hover: hover) and (pointer: fine) {
+  .memory-diff-btn:hover {
+    transform: scale(1.06) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(124, 107, 191, 0.2);
+    border-color: var(--color-primary);
+  }
 }
 
 .memory-diff-btn:active {
@@ -92,8 +94,8 @@
 .memory-hud {
   display: none;
   position: fixed;
-  top: 14px;
-  right: 20px;
+  top: clamp(10px, 3vw, 14px);
+  right: clamp(12px, 4vw, 20px);
   z-index: 200;
   pointer-events: none;
   gap: 0.6rem;
@@ -347,6 +349,7 @@
   padding: 0.5em 1.5em;
   border: none;
   border-radius: 50px;
+  min-height: 44px;
   cursor: url("../../assets/emoji/cursors/hand-point-32.png") 16 4, pointer !important;
   -webkit-tap-highlight-color: transparent;
   transition: all 0.3s ease-in-out;
@@ -369,8 +372,10 @@
   border: 2px solid #ddd;
 }
 
-.memory-endcard-btn:hover {
-  transform: scale(1.05) translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .memory-endcard-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+  }
 }
 
 .memory-endcard-btn:active {
@@ -385,11 +390,8 @@
   }
   .memory-diff-btn {
     padding: 1rem 1.4rem;
-    min-width: 100px;
   }
   .memory-hud {
-    top: 10px;
-    right: 12px;
     gap: 0.4rem;
   }
   .memory-hud span {
