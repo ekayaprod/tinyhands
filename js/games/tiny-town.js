@@ -408,6 +408,13 @@ function drawSpriteFlipped(c, emoji, x, y, size) {
 const BLDG_EMOJIS = ['🏢','🏬','🏪','🏨','🏦','🏥','🏫','🏛️','⛪','🏣','🏤','🏢'];
 const HOUSE_EMOJIS = ['🏠','🏡','🏘️'];
 
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+
+/**
+ * Attempts to place a building at the given coordinates, ensuring it doesn't overlap with city spur roads.
+ * Uses early returns and continue statements to provide linear evaluation of edges.
+ * * Historical Intent: Extracted via Untangler PR to flatten deeply nested boolean `.some` conditions inside `generateBuildings`.
+ */
 function tryPlaceBuilding(ex, ry, size, emoji, spurClear) {
   for (const e of edges) {
     if (e.type !== 'city' || (/^c\d\d$/.test(e.a) && /^c\d\d$/.test(e.b))) continue;
@@ -428,6 +435,10 @@ function tryPlaceBuilding(ex, ry, size, emoji, spurClear) {
   buildings.push({ x: ex, y: ry, emoji, size });
 }
 
+/**
+ * Procedurally generates buildings within the city center block regions.
+ * * Historical Intent: Part of the original Tiny Town engine (Mar 2026) to create the procedural City Center zone.
+ */
 function generateBuildings() {
   buildings = [];
   const roadW = 55, sidW = 10;
