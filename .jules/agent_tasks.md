@@ -10,6 +10,8 @@
 ## The [REFACTORER] Queue
 
 ## The [PRUNER] Queue
+* 🛡️ `og-image.jpg`: Massive uncompressed binary (>500KB) detected in source tree.
+* 🛡️ `qrcode.png`: Unreferenced media asset detected.
 
 * 🧹 `scripts/download-emoji.js:118`: Replace raw `console.log` calls with structured telemetry logger.
 * 🧹 `scripts/download-emoji.js:153`: Replace raw `console.log` calls with structured telemetry logger.
