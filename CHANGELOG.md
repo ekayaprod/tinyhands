@@ -14,9 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **PWA Enhancements:** Dismissible install banners, peach gradient PWA icons, and Safari-specific macOS support.
 
 ### Changed
+- **Routing:** Mapped legacy nested game routes via Vercel 301s to ensure backwards compatibility.
+- **Service Worker:** Updated app shell dependencies to eradicate 404 caching errors on newly nested modules.
 - **Performance:** Bumped Service Worker cache (v49) and switched to stale-while-revalidate for faster asset loading.
 - **UI/UX Polish:** Scaled up hero emojis for iPad portrait mode, improved mobile spacing, and added an explicit "Copy URL" button to the Safari banner.
 
 ### Fixed
+- Resolved broken local module import paths in nested game directories (`js/games/balloon-float/index.js`, `js/games/rocket-ride/index.js`, `js/games/tiny-town/index.js`).
 - Resolved hero scroll jitter and overflow glitches on iPhone/iPad devices.
 - Fixed layout issues with the level grid tile overlapping on landscape and desktop devices.
