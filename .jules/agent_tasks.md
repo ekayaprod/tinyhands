@@ -10,6 +10,8 @@
 ## The [REFACTORER] Queue
 
 ## The [PRUNER] Queue
+* 🛡️ `assets/emoji/cursors/raised_hand.png`: Unreferenced media asset detected.
+* 🛡️ `assets/emoji/cursors/backhand-index-pointing-up.png`: Unreferenced media asset detected.
 * 🛡️ `og-image.jpg`: Massive uncompressed binary (>500KB) detected in source tree.
 * 🛡️ `qrcode.png`: Unreferenced media asset detected.
 
