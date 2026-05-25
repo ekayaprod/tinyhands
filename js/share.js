@@ -9,6 +9,13 @@ function shareUrl(medium) {
   return SHARE_URL + '?utm_source=share&utm_medium=' + medium;
 }
 
+// 🕯️ CHRONICLE: AST reasoning maps the RegExp device/browser detection logic; Git history explains the business intent behind isolating these specific platforms.
+
+/**
+ * Validates the user's platform via User-Agent and ontouchstart capability.
+ * * Historical Intent: Added via commit 851df6a to ensure native Web Share API prompts are only triggered on compatible mobile environments.
+ * * Business Reasoning: Desktop browsers and unsupported environments fall back to clipboard copy. The regex handles standard mobile user agents, while the touch/width check acts as a fallback for iPads or other touch devices.
+ */
 function isMobileDevice() {
   return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
          ('ontouchstart' in window && window.innerWidth < 768);
