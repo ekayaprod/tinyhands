@@ -79,6 +79,13 @@ function drawSpriteFlipped(c, emoji, x, y, size) {
 const BLDG_EMOJIS = ['🏢','🏬','🏪','🏨','🏦','🏥','🏫','🏛️','⛪','🏣','🏤','🏢'];
 const HOUSE_EMOJIS = ['🏠','🏡','🏘️'];
 
+// 🕯️ CHRONICLE: AST reasoning maps the collision bounds logic; Git history explains the business intent to linearize highly nested iteration loops.
+
+/**
+ * Validates spatial constraints against local street grids to insert procedural buildings.
+ * Utilizes early guard clauses to flatten nested logic paths and resolve overlapping boundaries.
+ * * Historical Intent: Extracted via PR 2b0b420 (May 2026) by Untangler to linearize cyclomatic complexity within the sprawling `generateBuildings` method.
+ */
 function tryPlaceBuilding(ex, ry, size, emoji, spurClear) {
   for (const e of edges) {
     if (e.type !== 'city' || (/^c\d\d$/.test(e.a) && /^c\d\d$/.test(e.b))) continue;
