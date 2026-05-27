@@ -6,6 +6,11 @@ export const MAX_HORIZONTAL_VEL = 24.0;
 export const MAX_VERTICAL_VEL   = 5.5;
 export const HORIZONTAL_DAMPING = 0.91;
 export const VERTICAL_DAMPING   = 0.96;
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+/**
+ * Sets the brake friction coefficient to 0.85, applying strong deceleration when braking.
+ * * Historical Intent: Added via PR #24 (May 2026) to aggregate recent architecture and layout changes.
+ */
 export const BRAKE_DAMPING      = 0.85;
 export const MAX_TILT           = 30 * Math.PI / 180;  // 30 degrees in radians
 export const TILT_LERP          = 0.18;
