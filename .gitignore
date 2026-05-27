@@ -1,5 +1,8 @@
-.DS_Store
 .claude/
 .vercel
 .vercel/
 node_modules/
+.DS_Store
+__pycache__/
+*.swp
+*.swo
