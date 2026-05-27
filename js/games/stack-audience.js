@@ -65,6 +65,11 @@ function buildAudienceNow(parent) {
     setEmoji(span, emoji);
     span.style.left = x + 'px';
     span.style.bottom = '4px';
+    // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+    /**
+     * Sets the baseline opacity to 0.85 to visually recede the audience behind the main game elements.
+     * * Historical Intent: Added via PR #24 (May 2026) to aggregate recent architecture and layout changes.
+     */
     span.style.opacity = '0.85';
     span.style.setProperty('--audience-delay', (globalIndex * 0.04) + 's');
     span.style.setProperty('--idle-offset', (Math.random() * 3) + 's');
@@ -82,6 +87,11 @@ function buildAudienceNow(parent) {
     setEmoji(span, emoji);
     span.style.left = x + 'px';
     span.style.bottom = '4px';
+    // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+    /**
+     * Sets the baseline opacity to 0.85 to visually recede the audience behind the main game elements.
+     * * Historical Intent: Added via PR #24 (May 2026) to aggregate recent architecture and layout changes.
+     */
     span.style.opacity = '0.85';
     span.style.setProperty('--audience-delay', (globalIndex * 0.04) + 's');
     span.style.setProperty('--idle-offset', (Math.random() * 3) + 's');

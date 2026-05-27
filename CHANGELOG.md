@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Repository Hygiene:** Established `.gitattributes` baseline and expanded `.gitignore` to bar OS-level caches (`.DS_Store`, `__pycache__`).
 - **GitHub Pages Pipeline:** Automated deployment workflow with dynamic `<base href>` path fixing for relative assets.
 - **Repository Documentation:** Initialized Overseer triage board and root repository README.md.
 - **Song Parade:** New waterfall rhythm game mode for Melody Maker with full choruses and auto-play toggles.

@@ -1174,6 +1174,11 @@ function drawOceanAnimations(c) {
   const jumpY = 4000 + Math.sin(dol.t*3)*30;
   if (Math.sin(dol.t*3) > 0) {
     drawSprite(c, '🐬', dol.x, jumpY, 36);
+    // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+    /**
+     * Threshold of > 0.85 creates a brief visual window at the peak of the sine wave for rendering water splash particles.
+     * * Historical Intent: Added via PR #24 (May 2026) to aggregate recent architecture and layout changes.
+     */
     if (Math.sin(dol.t*3) > 0.85) drawSprite(c, '💦', dol.x+10, jumpY+10, 20);
   }
   const wh = oceanAnims.whale;
@@ -1771,6 +1776,11 @@ function drawDialog(c) {
   const prog = activeDialog.t / activeDialog.maxT;
   let alpha = 1;
   if (prog < 0.06) alpha = prog / 0.06;
+  // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+  /**
+   * When progress > 0.85 (last 15% of animation), fades out the UI to create a smooth exit transition.
+   * * Historical Intent: Added via PR #24 (May 2026) to aggregate recent architecture and layout changes.
+   */
   else if (prog > 0.85) alpha = (1 - prog) / 0.15;
   c.save();
   c.globalAlpha = alpha;
