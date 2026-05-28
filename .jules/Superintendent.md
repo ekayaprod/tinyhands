@@ -9,3 +9,10 @@
 - Checked for missing EOF newlines, broken markdown links, unreferenced media, duplicate files, large uncompressed binaries, CRLF line endings in text files, missing script executable permissions, merge conflict markers, missing environment keys, ephemeral OS cache files.
 - Generated `.gitattributes` containing `* text=auto` due to detecting CRLF endings on multiple non-text files, standardizing cross-platform text line endings.
 - Appended cache signatures (`.DS_Store`, `__pycache__`, `*.swp`, `*.swo`) to `.gitignore` to permanently bar them.
+
+**Action:** Cleared OS cache directories and enforced baseline Git attributes.
+- 🗑️ **Targets Removed:** Removed `.DS_Store`, `__pycache__/`, `*.swp`, and `*.swo` artifacts from the repository.
+- ⚖️ **Justification:** Prevent ephemeral OS-level cache and editor swap files from being accidentally committed, bloating the repository, or causing merge conflicts.
+- 🧹 **Methodology:** Native `rm -rf` on identified ghost artifacts and expanded `.gitignore` to permanently bar them.
+- ✅ **Safety Check:** Verified `.gitignore` deduplication via `sort -u` and executed `git clean -fd` equivalent locally to wipe temporary artifacts. Executable bits verified via `git update-index --chmod=+x scripts/download-emoji.js` to enforce execution baseline.
+- 📉 **Bloat Reduced:** Removed tracked and untracked ephemeral debris.
