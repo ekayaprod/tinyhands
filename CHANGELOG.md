@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Tiny Town:** Introduced orthogonal road rendering using 19 elbow nodes and hold-to-move keyboard logic.
+- **Spell It Out:** Added an emoji spelling game for ages 4-7 with persistent best scores.
+- **Memory Match:** New 3D emoji memory game spanning three progressive grid difficulties.
+- **Balloon Float:** Augmented gameplay with power-ups (Shield, SlowMo), a 3-lives HUD, and parallax environment layers.
+- **Rocket Ride:** Deployed a physics-based space flight module dodging dynamic space debris.
 - **Repository Hygiene:** Established `.gitattributes` baseline and expanded `.gitignore` to bar OS-level caches (`.DS_Store`, `__pycache__`).
 - **GitHub Pages Pipeline:** Automated deployment workflow with dynamic `<base href>` path fixing for relative assets.
 - **Repository Documentation:** Initialized Overseer triage board and root repository README.md.
