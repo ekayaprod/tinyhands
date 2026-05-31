@@ -983,6 +983,13 @@ function drawRoads(c) {
     c.lineTo(na.x-px*(aw/2), na.y-py*(aw/2));
     c.closePath(); c.fill();
   }
+  // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+  /**
+   * Renders non-grid city road spurs (e.g., paths leading to the bakery).
+   * The `^c\d\d$` regex acts as an explicit inclusion boundary, safely dropping core orthogonal city edges while
+   * explicitly preserving visual connectors for uniquely identified dynamic junction points.
+   * * Historical Intent: Injected via PR 6a2abc9 (Mar 2026) to add the bakery destination and orthogonal junctions.
+   */
   // City spurs (non-grid city roads like bakery)
   for (const e of edges) {
     if (e.type !== 'city') continue;
