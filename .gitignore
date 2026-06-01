@@ -6,4 +6,8 @@
 .vercel
 .vercel/
 __pycache__/
+assets/emoji/cursors/backhand-index-pointing-up.png
+assets/emoji/cursors/favicon-32.png
+assets/emoji/cursors/raised_hand.png
 node_modules/
+qrcode.png
