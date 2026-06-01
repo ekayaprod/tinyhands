@@ -27,3 +27,10 @@
 - 🧹 **Methodology:** Natively appended anomalies to `.jules/agent_tasks.md` and pruned duplicates.
 - ✅ **Safety Check:** Verified `.jules/agent_tasks.md` format using `cat` and `git diff`.
 - 📉 **Bloat Reduced:** None directly, relayed to specialist swarm.
+
+**Action:** Early-warning resolution.
+- 🗑️ **Targets Removed:** `assets/emoji/cursors/backhand-index-pointing-up.png`, `assets/emoji/cursors/raised_hand.png`, `assets/emoji/cursors/favicon-32.png`, `qrcode.png`.
+- ⚖️ **Justification:** Unreferenced media previously detected and relayed.
+- 🧹 **Methodology:** Native `git rm` on unlinked artifacts, appended signatures to `.gitignore` to bar reentry, and natively deleted the task entries from `.jules/agent_tasks.md`.
+- ✅ **Safety Check:** Verified `.gitignore` deduplication via `sort -u` and executed `grep` locally to confirm the artifacts are not referenced anywhere in source tree. Validated `node --check` natively across active `.js` files.
+- 📉 **Bloat Reduced:** Removed unreferenced artifacts from tracked tree and `.gitignore` file.
