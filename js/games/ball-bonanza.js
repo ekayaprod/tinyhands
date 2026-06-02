@@ -604,6 +604,10 @@ function collideBallChar(b) {
       const nx = (c.x - b.x) / d;
       const ny = (c.y - b.y) / d;
       const overlap = minD - d;
+
+      // 🕯️ CHRONICLE: The 0.3 / 0.7 multiplier acts as a mass distribution ratio,
+      // simulating a heavier main ball pushing lighter characters further away.
+      // * Historical Intent: Added via 13ee916 (Add Ball Bonanza game: chaotic emoji physics playground)
       b.x -= nx * overlap * 0.3;
       b.y -= ny * overlap * 0.3;
       c.x += nx * overlap * 0.7;
@@ -644,6 +648,10 @@ function collideCharChar() {
         const nx = (b.x - a.x) / d;
         const ny = (b.y - a.y) / d;
         const overlap = minD - d;
+
+        // 🕯️ CHRONICLE: The 0.5 multiplier acts as an equal mass distribution ratio,
+        // separating two objects of identical weight evenly.
+        // * Historical Intent: Added via 13ee916 (Add Ball Bonanza game: chaotic emoji physics playground)
         a.x -= nx * overlap * 0.5;
         a.y -= ny * overlap * 0.5;
         b.x += nx * overlap * 0.5;
@@ -684,6 +692,10 @@ function collideBalls() {
         const nx = (b.x - a.x) / d;
         const ny = (b.y - a.y) / d;
         const overlap = minD - d;
+
+        // 🕯️ CHRONICLE: The 0.5 multiplier splits positional correction equally,
+        // enforcing equal mass collision between bonus balls.
+        // * Historical Intent: Added via 13ee916 (Add Ball Bonanza game: chaotic emoji physics playground)
         a.x -= nx * overlap * 0.5;
         a.y -= ny * overlap * 0.5;
         b.x += nx * overlap * 0.5;

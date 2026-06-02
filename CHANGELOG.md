@@ -25,8 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Responsive Layouts:** Morphed static grid containers in games to use fluid geometry.
 - **Fluid Geometry:** Replaced clashing browser outlines with brand-aligned `:focus-visible` rings and upgraded hover effects to fluid `all 0.3s ease-in-out` transitions.
 - **Refactoring:** Flattened heavily nested conditions within `generateBuildings` logic to use linear paths.
-- **Payload Efficiency:** Forced lazy loading (`loading="lazy"`, `decoding="async"`) across DOM-injected and dynamic emojis to aggressively reduce network payload on initialization.
-- **Maintenance:** Removed diagnostic console logs, formatted game and config files, and aggregated platform detection histories.
+- **Payload Efficiency:** Forced lazy loading (`loading="lazy"`, `decoding="async"`) across DOM-injected and dynamic emojis to aggressively reduce network payload on initialization, and purged unreferenced media assets.
+- **Maintenance:** Enforced git executable baselines, cleared repository debris, and relayed hazard constraints (e.g. lockfile mismatches) to the Overseer board. Removed diagnostic console logs, formatted game and config files, and aggregated platform detection histories.
 - **Routing:** Mapped legacy nested game routes via Vercel 301s to ensure backwards compatibility.
 - **Service Worker:** Updated app shell dependencies to eradicate 404 caching errors on newly nested modules.
 - **Performance:** Bumped Service Worker cache (v49) and switched to stale-while-revalidate for faster asset loading.
