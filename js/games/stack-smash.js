@@ -248,6 +248,11 @@ function stStartSway() {
 
   // Block width variety: after first 3 blocks, vary width 75%-125%
   if (stBlockCount >= 3) {
+    // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+    /**
+     * The 0.75 multiplier sets the baseline width lower-bound for the difficulty scaling.
+     * * Historical Intent: Added via commit 17a6e4dc to introduce block width variety and a steeper difficulty ramp.
+     */
     const variation = 0.75 + Math.random() * 0.5;
     stBlockWidth = Math.round(stOriginalWidth * variation);
   } else {

@@ -400,6 +400,11 @@ function updatePuffs(dt) {
 
 function spawnSparkles(x, y, count, color) {
   for (let i = 0; i < count; i++) {
+    // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+    /**
+     * Calculates the even radial spacing (Math.PI * 2 / count) and injects a 0.5 random angle offset.
+     * * Historical Intent: Added via commit 7f2c463b to introduce power-up sparkles for the 3-lives system.
+     */
     const angle = (Math.PI * 2 / count) * i + Math.random() * 0.5;
     const speed = 60 + Math.random() * 80;
     sparkles.push({ x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed,
