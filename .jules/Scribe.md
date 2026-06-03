@@ -6,6 +6,8 @@
 * Injected AST-reasoned JSDoc for `tryPlaceBuilding` flattening collision constraints in `js/games/tiny-town/index.js`.
 * Injected AST-reasoned JSDoc for `^c\d\d$` boundary inclusion regex in `js/games/tiny-town/index.js`.
 * Injected AST-reasoned block comments for physics collision mass distribution logic in `js/games/ball-bonanza.js`.
+* Injected AST-reasoned JSDoc for `0.75` block width variation baseline magic number in `js/games/stack-smash.js`.
+* Injected AST-reasoned block comments for `Math.PI * 2 / count` radial particle distribution logic in `js/games/balloon-float/index.js`.
 
 ## Changelog Aggregation
 * Hashes processed: `19fbee9`, `7f2c463`, `c42638d`, `204e1ad`, `6a2abc9` compressed to summary bullets in CHANGELOG.md to document Rocket Ride, Balloon Float, Memory Match, Spell It Out, and Tiny Town updates.
@@ -13,3 +15,4 @@
 * Hashes processed: `8c07a2a` through `8edd9bf` compressed to summary bullets in CHANGELOG.md documenting Vercel redirects, Service Worker fixes, module import bugfixes, and Swarm relay operations.
 * Hashes processed: `636faa7` through `e5b87b5` and `ea87540` / `8c07a2a` aggregated into `CHANGELOG.md` under [Unreleased] capturing fluid geometry updates, payload efficiency, refactoring, and CI fixes.
 * Hashes processed: `c9342ab`, `079773a`, `6585007`, `9288784`, `68f553c` aggregated into `CHANGELOG.md` under [Unreleased] capturing repository hygiene additions, unreferenced media purging, and swarm hazard relays.
+* Hashes processed: `e79b311`, `079773a` aggregated into `CHANGELOG.md` under [Unreleased] capturing physics collision docs and lockfile hazard relays.
