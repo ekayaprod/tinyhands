@@ -188,6 +188,7 @@ function generateStreetDetails() {
   // Suburb fences along some edges
   for (const e of edges) {
     if (e.type !== 'suburban') continue;
+    // 🕯️ CHRONICLE: AST reasoning acts as a 70% probability gate for generating suburban fences; Git history explains the business intent to procedurally generate a 5-zone village exploration game (added via commit 92bef188).
     if (Math.random() > 0.3) continue;
     const na = nodeMap[e.a], nb = nodeMap[e.b];
     const dist = Math.hypot(nb.x-na.x, nb.y-na.y);
@@ -224,6 +225,7 @@ function generateHouses() {
       const emoji = HOUSE_EMOJIS[Math.floor(rng(0,3))];
       const size = 50 + Math.floor(rng(0,22));
       const yard = [];
+      // 🕯️ CHRONICLE: AST reasoning acts as a 60% probability gate for adding yard decorations to houses; Git history explains the business intent to populate the procedural village (added via commit 92bef188).
       if (Math.random() < 0.6) {
         const yardEmojis = ['🌷','🌻','🚗','🐕','🌳','🧸'];
         yard.push({ dx: rng(-24,24), dy: rng(-20,20), emoji: yardEmojis[Math.floor(rng(0,6))], size: 18 });
@@ -259,6 +261,7 @@ function generateHouses() {
       const emoji = HOUSE_EMOJIS[Math.floor(rng(0,3))];
       const size = 50 + Math.floor(rng(0,22));
       const yard = [];
+      // 🕯️ CHRONICLE: AST reasoning acts as a 60% probability gate for adding yard decorations to extra suburb houses; Git history explains the business intent to fill empty green areas (added via commit 8f3319bd).
       if (Math.random() < 0.6) {
         const yardEmojis = ['🌷','🌻','🚗','🐕','🌳','🧸'];
         yard.push({ dx: rng(-24,24), dy: rng(-20,20), emoji: yardEmojis[Math.floor(rng(0,6))], size: 18 });
