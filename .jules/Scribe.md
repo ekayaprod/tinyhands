@@ -16,3 +16,4 @@
 * Hashes processed: `636faa7` through `e5b87b5` and `ea87540` / `8c07a2a` aggregated into `CHANGELOG.md` under [Unreleased] capturing fluid geometry updates, payload efficiency, refactoring, and CI fixes.
 * Hashes processed: `c9342ab`, `079773a`, `6585007`, `9288784`, `68f553c` aggregated into `CHANGELOG.md` under [Unreleased] capturing repository hygiene additions, unreferenced media purging, and swarm hazard relays.
 * Hashes processed: `e79b311`, `079773a` aggregated into `CHANGELOG.md` under [Unreleased] capturing physics collision docs and lockfile hazard relays.
+- Hashes processed: `91556ad` aggregated into CHANGELOG.md under [Unreleased] capturing magic numbers documentation for Tiny Town.
