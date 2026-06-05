@@ -733,6 +733,10 @@ function startMysteryReveal() {
 function updateMysteryReveal(dt) {
   if (!mysteryRevealing) return;
   mysteryRevealing.timer -= dt;
+
+  // 🕯️ CHRONICLE: The 12 and 4 multipliers act as spin speeds for the power-up roulette,
+  // slowing down as the timer decreases to build anticipation before settling on the reward.
+  // * Historical Intent: Added via commit 7f2c463 (Mar 2026) to add a 3-lives system and power-ups.
   const speed = mysteryRevealing.timer > 0.6 ? 12 : 4;
   mysteryRevealing.slotPhase += dt * speed;
 

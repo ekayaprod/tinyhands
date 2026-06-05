@@ -9,8 +9,13 @@ import { EMOJI_REGISTRY } from '../emoji-registry.js';
 
 // ---- Constants ----
 const PAD = 20;
+
+// 🕯️ CHRONICLE: The 0.995 and 0.975 drag multipliers simulate ground friction and air resistance
+// at 60fps, ensuring objects eventually settle into a resting state after a bounce or collision.
+// * Historical Intent: Added via commit 13ee916 (Mar 2026) to introduce chaotic physics for the Ball Bonanza game.
 const BALL_DRAG = 0.995;       // per-frame at 60 fps
 const CHAR_DRAG = 0.975;
+
 const WALL_REST = 0.9;
 const CHAR_WALL_REST = 0.7;
 const BALL_CHAR_REST = 0.8;
