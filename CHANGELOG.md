@@ -23,6 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **PWA Enhancements:** Dismissible install banners, peach gradient PWA icons, and Safari-specific macOS support.
 
 ### Changed
+- **UI/UX Polish:** Migrated all system font emojis to Microsoft Fluent 3D PNGs via jsDelivr CDN, unifying the visual experience across devices.
 - **Responsive Layouts:** Morphed static grid containers in games to use fluid geometry.
 - **Fluid Geometry:** Replaced clashing browser outlines with brand-aligned `:focus-visible` rings and upgraded hover effects to fluid `all 0.3s ease-in-out` transitions.
 - **Refactoring:** Flattened heavily nested conditions within `generateBuildings` logic to use linear paths.

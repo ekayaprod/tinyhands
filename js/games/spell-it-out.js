@@ -336,7 +336,9 @@ function handleCorrect(blankTile, letter) {
   // Disable guessed key
   disableKey(letter);
 
-  // Next word after delay
+  // 🕯️ CHRONICLE: The 1800ms timeout provides a short visual pause after a correct
+  // spelling before progressing, allowing the child to process the reward animation.
+  // * Historical Intent: Added via commit 204e1ad (Mar 2026) to introduce emoji spelling for ages 4-7.
   nextWordTimer = setTimeout(() => showNextWord(), 1800);
 }
 
