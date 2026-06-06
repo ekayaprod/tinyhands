@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
+- **Ball Bonanza:** Deployed a chaotic emoji physics playground with scaling entities and a unified collectible system.
 - **Repository Maintenance:** Chronicled magic numbers for Tiny Town generation thresholds. Documented physics collision mass distribution logic and surfaced lockfile mismatch hazards.
 - **Tiny Town:** Introduced orthogonal road rendering using 19 elbow nodes and hold-to-move keyboard logic.
 - **Spell It Out:** Added an emoji spelling game for ages 4-7 with persistent best scores.
@@ -23,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **PWA Enhancements:** Dismissible install banners, peach gradient PWA icons, and Safari-specific macOS support.
 
 ### Changed
+
 - **UI/UX Polish:** Migrated all system font emojis to Microsoft Fluent 3D PNGs via jsDelivr CDN, unifying the visual experience across devices.
 - **Responsive Layouts:** Morphed static grid containers in games to use fluid geometry.
 - **Fluid Geometry:** Replaced clashing browser outlines with brand-aligned `:focus-visible` rings and upgraded hover effects to fluid `all 0.3s ease-in-out` transitions.
@@ -35,6 +38,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **UI/UX Polish:** Scaled up hero emojis for iPad portrait mode, improved mobile spacing, and added an explicit "Copy URL" button to the Safari banner.
 
 ### Fixed
+
+- **Ball Bonanza:** Resolved UI overlap glitches, preload crashes, and restored off-screen bonus ball deletion.
 - Resolved broken local module import paths in nested game directories (`js/games/balloon-float/index.js`, `js/games/rocket-ride/index.js`, `js/games/tiny-town/index.js`).
 - Resolved hero scroll jitter and overflow glitches on iPhone/iPad devices.
 - Fixed layout issues with the level grid tile overlapping on landscape and desktop devices.

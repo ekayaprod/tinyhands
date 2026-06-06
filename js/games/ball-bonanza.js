@@ -529,6 +529,9 @@ function updateBallPhysics(b, dt) {
   b.vy *= f;
   b.x += b.vx * sDt * 60;
   b.y += b.vy * sDt * 60;
+  // 🕯️ CHRONICLE: Translates linear velocity into angular rotation for the rolling effect.
+  // The * 60 * 2 multiplier normalizes rotation speed across fluctuating delta times while creating a slightly exaggerated cartoonish spin.
+  // * Historical Intent: Added via PR 6174ce1 (Collectible system) to unify rolling logic for all emojis and newly added collectible sprites.
   b.rotation += speed(b) * sDt * 60 * 2 * (b.vx > 0 ? 1 : -1);
 
   // Wall bounces

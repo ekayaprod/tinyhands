@@ -1555,6 +1555,9 @@ function gameLoop(timestamp) {
       for (const layer of landscapeLayers) {
         layer.yBase += scrollSpeed * dtNorm * (0.5 + layer.speed * 6);
       }
+      // 🕯️ CHRONICLE: Calculates the downward scroll velocity for the launch pad to sync with the Earth landscape.
+      // 0.5 base speed + 0.25 depth scale * 6 speed multiplier creates the correct parallax visual depth as the rocket ascends.
+      // * Historical Intent: Added via PR 3f75580 (Earth launch scene) to bind the launch pad's perspective descent relative to the ground layers.
       launchPadY += scrollSpeed * dtNorm * (0.5 + 0.25 * 6);
     }
   }

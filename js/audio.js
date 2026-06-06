@@ -808,6 +808,8 @@ export function playNearMiss() {
   const filter = audioCtx.createBiquadFilter();
   filter.type = 'bandpass';
   filter.frequency.setValueAtTime(2000, now);
+  // 🕯️ CHRONICLE: Simulates the Doppler shift of wind rushing past by rapidly dropping the bandpass frequency (2000Hz -> 800Hz) over 80ms.
+  // * Historical Intent: Added via PR 7f2c463 (Balloon Float polish) to synthesize a realistic "swoosh" sound effect when dodging obstacles.
   filter.frequency.exponentialRampToValueAtTime(800, now + 0.08);
   filter.Q.value = 1.0;
   const gain = audioCtx.createGain();

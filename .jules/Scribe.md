@@ -11,6 +11,9 @@
 * Injected AST-reasoned docstring explaining the mystery box spin speed in `js/games/balloon-float/index.js`.
 * Injected AST-reasoned docstring explaining the spelling delay in `js/games/spell-it-out.js`.
 * Injected AST-reasoned docstring explaining the physics drag multipliers in `js/games/ball-bonanza.js`.
+* Injected AST-reasoned docstring explaining the parallax velocity math in `js/games/rocket-ride/index.js`.
+* Injected AST-reasoned docstring explaining the rolling rotation formula in `js/games/ball-bonanza.js`.
+* Injected AST-reasoned docstring explaining the Doppler shift audio synthesis node in `js/audio.js`.
 
 ## Changelog Aggregation
 * Hashes processed: `f97602a` aggregated into `CHANGELOG.md` under [Unreleased] capturing Microsoft Fluent 3D emoji migration.
@@ -21,3 +24,4 @@
 * Hashes processed: `c9342ab`, `079773a`, `6585007`, `9288784`, `68f553c` aggregated into `CHANGELOG.md` under [Unreleased] capturing repository hygiene additions, unreferenced media purging, and swarm hazard relays.
 * Hashes processed: `e79b311`, `079773a` aggregated into `CHANGELOG.md` under [Unreleased] capturing physics collision docs and lockfile hazard relays.
 - Hashes processed: `91556ad` aggregated into CHANGELOG.md under [Unreleased] capturing magic numbers documentation for Tiny Town.
+- Hashes processed: `13ee916`, `6174ce1`, `3b5552a`, `b838d46`, `b08b81d`, `f18ef71` aggregated into CHANGELOG.md under [Unreleased] capturing Ball Bonanza release notes.
