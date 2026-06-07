@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - **Repository Maintenance:** Chronicled magic numbers for Tiny Town generation thresholds. Documented physics collision mass distribution logic and surfaced lockfile mismatch hazards.
+- **Ball Bonanza:** Introduced a chaotic emoji physics playground with collision mass distribution logic, responsive speed scaling, collectible power-ups, and a 3-lives HUD.
 - **Tiny Town:** Introduced orthogonal road rendering using 19 elbow nodes and hold-to-move keyboard logic.
 - **Spell It Out:** Added an emoji spelling game for ages 4-7 with persistent best scores.
 - **Memory Match:** New 3D emoji memory game spanning three progressive grid difficulties.
@@ -24,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - **UI/UX Polish:** Migrated all system font emojis to Microsoft Fluent 3D PNGs via jsDelivr CDN, unifying the visual experience across devices.
-- **Responsive Layouts:** Morphed static grid containers in games to use fluid geometry.
+- **Responsive Layouts:** Scaled Ball Bonanza entities and character counts to screen size, and morphed static grid containers in games to use fluid geometry.
 - **Fluid Geometry:** Replaced clashing browser outlines with brand-aligned `:focus-visible` rings and upgraded hover effects to fluid `all 0.3s ease-in-out` transitions.
 - **Refactoring:** Flattened heavily nested conditions within `generateBuildings` logic to use linear paths.
 - **Payload Efficiency:** Forced lazy loading (`loading="lazy"`, `decoding="async"`) across DOM-injected and dynamic emojis to aggressively reduce network payload on initialization, and purged unreferenced media assets.

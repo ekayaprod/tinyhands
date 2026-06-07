@@ -61,7 +61,9 @@ function computeSizes() {
   const areaRatio = (screenW * screenH) / (375 * 667); // iPhone SE area
   INITIAL_CHARS = Math.min(Math.round(BASE_CHARS + (areaRatio - 1) * 2), 10);
   INITIAL_CHARS = Math.max(BASE_CHARS, INITIAL_CHARS);
-  // Reduce starting characters by 25%
+  // 🕯️ CHRONICLE: The 0.75 multiplier reduces the starting character count by 25%
+  // to prevent UI clutter and ensure performance on mobile devices.
+  // * Historical Intent: Added via b838d46 (Fix 5 bugs: ESC hint, exit button overlap, character count, PWA icon, header visibility)
   INITIAL_CHARS = Math.max(3, Math.round(INITIAL_CHARS * 0.75));
   MAX_CHARS = areaRatio > 2 ? MAX_CHARS_LARGE : MAX_CHARS_SMALL;
 }
@@ -625,6 +627,9 @@ function collideBallChar(b) {
 
       // Knockback to character
       const bs = speed(b);
+      // 🕯️ CHRONICLE: The 0.6 multiplier scales the knockback force relative to the ball's speed,
+      // preventing characters from being launched at disproportionate velocities.
+      // * Historical Intent: Added via 13ee916 (Add Ball Bonanza game: chaotic emoji physics playground)
       const knockForce = Math.max(bs * 0.6, 4);
       c.vx = nx * knockForce;
       c.vy = ny * knockForce;
@@ -813,6 +818,9 @@ function launchBallRandom() {
   // Bonus balls also get a random kick
   bonusBalls.forEach(b => {
     const a = Math.random() * Math.PI * 2;
+    // 🕯️ CHRONICLE: The 0.6 multiplier reduces the random kick applied to bonus balls,
+    // ensuring they are less disruptive than the main ball.
+    // * Historical Intent: Added via 3b5552a (Fix bonus ball behavior: respond to input, fly off-screen on expiry)
     kickBall(b, Math.cos(a) * LAUNCH_SPEED * 0.6, Math.sin(a) * LAUNCH_SPEED * 0.6);
   });
   sndLaunch();
@@ -824,6 +832,9 @@ function launchBallToward(tx, ty) {
   const dy = ty - ball.y;
   const d = Math.hypot(dx, dy);
   if (d < 1) { launchBallRandom(); return; }
+  // 🕯️ CHRONICLE: The 0.04 multiplier scales the launch speed proportionally to the distance
+  // from the user's tap or click, capping at the maximum LAUNCH_SPEED.
+  // * Historical Intent: Added via 13ee916 (Add Ball Bonanza game: chaotic emoji physics playground)
   const spd = Math.min(d * 0.04, LAUNCH_SPEED);
   const nx = dx / d;
   const ny = dy / d;
