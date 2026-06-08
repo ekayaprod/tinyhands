@@ -71,8 +71,20 @@ const DANGER_ZONE = 1.6;
 const WOBBLE_SCALE = 2.0;
 const LEAN_SCALE = 5.0;
 const MAX_WOBBLE_ANGLE = 20;
-const FIRST_BLOCK_MAX_OFFSET = 0.40; // max offset ratio on ball before game over
-const MIN_OVERLAP_RATIO = 0.35;      // block must overlap at least 35% of its width
+
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+/**
+ * Max offset ratio on ball before game over.
+ * * Historical Intent: Added via commit 64b3007 (Mar 2026) to relax first-block offset to 0.40 and add swing randomness to prevent spam wins.
+ */
+const FIRST_BLOCK_MAX_OFFSET = 0.40;
+
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+/**
+ * Block must overlap at least 35% of its width.
+ * * Historical Intent: Added via commit 9853e67 (Mar 2026) to add minimum overlap requirement (35%) for block placement.
+ */
+const MIN_OVERLAP_RATIO = 0.35;
 const SWAY_SPEEDS = [0.6, 0.9, 1.2, 1.5, 1.8, 2.1];
 
 // ---- High Score ----
@@ -165,7 +177,11 @@ function stRecalcBalance() {
   const normalizedLean = avgOffset / stOriginalWidth;
 
   // --- Counterbalance-aware structural stress ---
-  // Natural settling: small decay each block (tower "settles")
+  // 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+  /**
+   * Natural settling: small decay each block (tower "settles").
+   * * Historical Intent: Added via commit 238d28b (Mar 2026) to reduce stress decay and counterbalance relief so towers collapse faster without skillful balancing.
+   */
   stStructuralStress *= 0.82;
 
   const lastBlock = stTowerBlocks[stTowerBlocks.length - 1];
