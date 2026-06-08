@@ -28,3 +28,6 @@
 
 ## The [OPERATOR] Queue
 * 📦 `package-lock.json`: Lockfile mismatch detected against package.json. Sync required.
+
+## The [PRUNER] Queue
+* 🛡️ `og-image.jpg`: Massive uncompressed binary (>500KB) detected in source tree.
