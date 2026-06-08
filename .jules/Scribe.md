@@ -21,3 +21,10 @@
 * Hashes processed: `c9342ab`, `079773a`, `6585007`, `9288784`, `68f553c` aggregated into `CHANGELOG.md` under [Unreleased] capturing repository hygiene additions, unreferenced media purging, and swarm hazard relays.
 * Hashes processed: `e79b311`, `079773a` aggregated into `CHANGELOG.md` under [Unreleased] capturing physics collision docs and lockfile hazard relays.
 - Hashes processed: `91556ad` aggregated into CHANGELOG.md under [Unreleased] capturing magic numbers documentation for Tiny Town.
+**Structural Rules Applied:**
+- Injected AST-compliant `JSDoc` comments targeting magic numbers in `js/games/stack-smash.js` (`FIRST_BLOCK_MAX_OFFSET`, `MIN_OVERLAP_RATIO`, and `stStructuralStress *= 0.82`).
+
+**Commit Hashes Processed:**
+- 64b3007d357e59f0cb077e5a8338c8d2a10f5c32
+- 9853e677b6592c381121a10ba708622c1e830aa8
+- 238d28bfc1a3ed4d09a61fc1e8cacd0c31acd533
