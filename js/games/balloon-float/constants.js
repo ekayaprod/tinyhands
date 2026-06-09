@@ -1,3 +1,8 @@
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+/**
+ * Sets the vertical acceleration rate for the player's balloon entity.
+ * * Historical Intent: Added via PR/commit e5b87b5 (May 2026) to scaffold domain boundaries and decouple monolithic routing files.
+ */
 export const GRAVITY         = 0.12;
 export const BUOYANCY        = 0.03;
 export const TAP_BOOST       = -3.0;
@@ -14,6 +19,11 @@ export const HITBOX_SCALE    = 0.75;
 export const NEAR_MISS_DIST  = 22;
 
 // ---- Obstacle spawning ----
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+/**
+ * Defines the initial horizontal velocity at which new obstacles travel across the screen.
+ * * Historical Intent: Added via PR/commit e5b87b5 (May 2026) to scaffold domain boundaries and decouple monolithic routing files.
+ */
 export const OBS_BASE_SPEED       = 2.0;
 export const SPAWN_INTERVAL_START = 2.5;
 export const SPAWN_INTERVAL_MIN   = 0.9;
@@ -43,6 +53,11 @@ export const PU_SLOWMO  = 'slowmo';
 export const PU_MYSTERY = 'mystery';
 
 // ---- Power-up config ----
+// 🕯️ CHRONICLE: AST reasoning explains the logic; Git history explains the business intent.
+/**
+ * Specifies the initial delay before power-ups are introduced into the gameplay loop.
+ * * Historical Intent: Added via PR/commit e5b87b5 (May 2026) to scaffold domain boundaries and decouple monolithic routing files.
+ */
 export const POWERUP_SPAWN_START = 20;
 export const POWERUP_SPAWN_BASE  = 18;
 export const POWERUP_SPAWN_VAR   = 8;

@@ -28,3 +28,16 @@
 - 64b3007d357e59f0cb077e5a8338c8d2a10f5c32
 - 9853e677b6592c381121a10ba708622c1e830aa8
 - 238d28bfc1a3ed4d09a61fc1e8cacd0c31acd533
+**Structural Rules Applied:**
+- Injected AST-compliant `JSDoc` comments targeting magic numbers in `js/games/balloon-float/constants.js` (`GRAVITY`, `OBS_BASE_SPEED`, `POWERUP_SPAWN_START`).
+
+**Commit Hashes Processed:**
+- e35dfad
+- 86bdc64
+- fbdb8de
+- 8321c1c
+- 0096540
+- dbb1d58
+- 109841a
+- 91556ad
+- fd27df1

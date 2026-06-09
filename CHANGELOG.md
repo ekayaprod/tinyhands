@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Repository Maintenance:** Chronicled magic numbers and procedural generation thresholds for Balloon Float and Tiny Town games. Aggregated recent superintendent maintenance operations, including purging contamination and enforcing executable baselines.
 - **Repository Maintenance:** Chronicled gameplay mechanics and magic numbers for Stack It Up (e.g. stress decay and structural boundaries). Chronicled magic numbers for Tiny Town generation thresholds. Documented physics collision mass distribution logic and surfaced lockfile mismatch hazards.
 - **Tiny Town:** Introduced orthogonal road rendering using 19 elbow nodes and hold-to-move keyboard logic.
 - **Spell It Out:** Added an emoji spelling game for ages 4-7 with persistent best scores.
