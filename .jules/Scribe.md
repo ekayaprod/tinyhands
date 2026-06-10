@@ -28,3 +28,6 @@
 - 64b3007d357e59f0cb077e5a8338c8d2a10f5c32
 - 9853e677b6592c381121a10ba708622c1e830aa8
 - 238d28bfc1a3ed4d09a61fc1e8cacd0c31acd533
+**Learning:** Magic numbers | **Action:** Injected AST-reasoned docstring explaining the bouncy ball physics restitution limits in js/games/ball-bonanza.js
+**Learning:** Magic numbers | **Action:** Injected AST-reasoned JSDoc for animation stagger timing in js/games/spell-it-out.js
+- Hashes processed: 13ee916, 204e1ad aggregated into CHANGELOG.md under [Unreleased] capturing magic numbers documentation for Ball Bonanza and Spell It Out.

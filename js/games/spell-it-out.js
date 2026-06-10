@@ -266,6 +266,10 @@ function buildTiles() {
       }
 
       // Stagger entrance
+      /**
+       * 🕯️ CHRONICLE: Staggers entrance animation across character tiles for a fluid sequence.
+       * * Historical Intent: Added via commit 204e1ad (Mar 2026) to introduce emoji spelling for ages 4-7.
+       */
       tile.style.animationDelay = (i * 0.06) + 's';
       spellTilesEl.appendChild(tile);
     }
