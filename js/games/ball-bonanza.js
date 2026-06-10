@@ -16,6 +16,8 @@ const PAD = 20;
 const BALL_DRAG = 0.995;       // per-frame at 60 fps
 const CHAR_DRAG = 0.975;
 
+// 🕯️ CHRONICLE: Restitution limits preventing eternal bouncing loops.
+// * Historical Intent: Added via commit 13ee916 (Mar 2026) to introduce chaotic bouncy ball physics for Ball Bonanza.
 const WALL_REST = 0.9;
 const CHAR_WALL_REST = 0.7;
 const BALL_CHAR_REST = 0.8;
