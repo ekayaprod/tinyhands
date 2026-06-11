@@ -11,8 +11,12 @@
 * Injected AST-reasoned docstring explaining the mystery box spin speed in `js/games/balloon-float/index.js`.
 * Injected AST-reasoned docstring explaining the spelling delay in `js/games/spell-it-out.js`.
 * Injected AST-reasoned docstring explaining the physics drag multipliers in `js/games/ball-bonanza.js`.
+* Injected AST-reasoned docstring for the animation delay timeout in `js/games/memory-match.js`.
+* Injected AST-reasoned docstring for responsive physics `gameScale` multiplier in `js/games/rocket-ride/index.js`.
+* Injected AST-reasoned docstring for the sky gradient lower bounds color in `js/games/balloon-float/index.js`.
 
 ## Changelog Aggregation
+* Hashes processed: `c42638d`, `b43a273`, `0db424c` aggregated into `CHANGELOG.md` under [Unreleased] capturing documentation additions for UI animations and responsive logic.
 * Hashes processed: `f97602a` aggregated into `CHANGELOG.md` under [Unreleased] capturing Microsoft Fluent 3D emoji migration.
 * Hashes processed: `19fbee9`, `7f2c463`, `c42638d`, `204e1ad`, `6a2abc9` compressed to summary bullets in CHANGELOG.md to document Rocket Ride, Balloon Float, Memory Match, Spell It Out, and Tiny Town updates.
 * Hashes processed: ~269 commits between 2026-03-01 and 2026-04-01, compressed to summary bullets in CHANGELOG.md to document Song Parade, Melody Maker, PWA, and Parallax Hero Section feature additions and fixes.

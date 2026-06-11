@@ -139,6 +139,9 @@ function initCanvas() {
   // CSS inset:0 + width/height:100% handles display sizing — no style overrides needed
   ctx = canvas.getContext('2d');
   ctx.scale(dpr, dpr);
+  // 🕯️ CHRONICLE: The gameScale multiplier ensures the physics engine and rendering
+  // remain proportional and playable across ultra-wide desktop monitors and narrow mobile screens.
+  // * Historical Intent: Added via commit b43a273 (Mar 2026) to ensure consistent physics across varying screen sizes.
   gameScale = Math.max(1, Math.min(2, W / 800));
 }
 
