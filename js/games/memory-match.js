@@ -240,6 +240,9 @@ function evaluatePair() {
   const [a, b] = flippedCards;
 
   if (a.emoji === b.emoji) {
+    // 🕯️ CHRONICLE: The 400ms timeout delays the match sequence just enough to let the
+    // initial card flip animation resolve, preventing jarring, instantaneous state changes.
+    // * Historical Intent: Added via commit c42638d (Mar 2026) to introduce a 3D emoji memory game.
     // Match!
     setTimeout(() => {
       a.matched = true;

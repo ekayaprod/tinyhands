@@ -1063,6 +1063,9 @@ function render() {
   skyGrad.addColorStop(0, '#C8DCF0');
   skyGrad.addColorStop(0.4, '#D8E8F5');
   skyGrad.addColorStop(0.7, '#E8F0F8');
+  // 🕯️ CHRONICLE: The EAF4E8 color stop grounds the gradient with a subtle green tint,
+  // hinting at a grassy horizon below the viewport.
+  // * Historical Intent: Added via commit 0db424c (Mar 2026) to add a 3-lives system and power-ups.
   skyGrad.addColorStop(1, '#EAF4E8');
   ctx.fillStyle = skyGrad;
   ctx.fillRect(0, 0, W, H);
